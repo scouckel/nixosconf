@@ -1,0 +1,3 @@
+disclaimer, i'm gonna implement a different config for my laptop later
+
+this is just to establish the file structure! :)
