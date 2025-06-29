@@ -9,6 +9,8 @@
         "$filem" = "thunar";
 
         bind = [
+          "$mod, M, exit,"         
+
           "$mod, F1, exec, wofi --show drun"
           "$mod, F2, exec, $term"
           "$mod, F3, exec, $filem"
