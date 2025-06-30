@@ -3,9 +3,11 @@
 {
   programs.kitty = {
     enable = true;
-    package = kitty.nix;
     enableGitIntegration = true;
-    font = monospace;
-
+    font = {
+      package = pkgs.dm-mono;
+      name = "DM Mono";
+      size = 10;
+    };
   };
 }
