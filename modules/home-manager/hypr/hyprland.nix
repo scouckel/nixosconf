@@ -47,7 +47,7 @@
 
     settings = {
       exec-once = [
-        systemctl --user start hyprpolkitagent
+        "systemctl --user start hyprpolkitagent"
       ];
 
       # environment variables
