@@ -6,11 +6,50 @@
     ./binds.nix
   ];
 
+  #fixing issues
+
+  home.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    # x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
+
+  gtk = {
+    enable = true;
+
+    theme = {
+      package = pkgs.flat-remix-gtk;
+      name = "Flat-Remix-GTK-Grey-Darkest";
+    };
+
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+
+    font = {
+      name = "Sans";
+      size = 11;
+    };
+  };
+
+  wayland.windowManager.hyprland.systemd.variables = ["--all"];
+
+  #ok now actually hyprland
+
   wayland.windowManager.hyprland = {
     enable = true;
         
 
     settings = {
+      exec-once = [
+        systemctl --user start hyprpolkitagent
+      ];
+
       # environment variables
       env = [
         "XCURSOR_SIZE,24"
@@ -20,10 +59,10 @@
       monitor = ",preferred,auto,1";
 
       general =  {
-          gaps_in = 1;
-          gaps_out = 5;
+          gaps_in = 0;
+          gaps_out = 0;
 
-          border_size = 2;
+          border_size = 1;
 
           # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
           "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
