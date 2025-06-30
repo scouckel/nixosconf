@@ -3,7 +3,7 @@
 {
   imports = [
     ./git.nix
-#    ./vscodium.nix
+    ./vscodium.nix
   ];
 
 }

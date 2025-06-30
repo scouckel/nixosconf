@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./monitors.nix
+    ./decoration.nix
     ./binds.nix
   ];
 
@@ -38,14 +38,11 @@
           layout = "dwindle";
       };
 
-      decoration = {
-        rounding = 0;
+      misc = {
+        force_default_wallpaper = 1;
+        disable_hyprland_logo = false;
+        vfr = true;
       };
-
-      animations = {
-        enabled = false;
-      };
-
     };
   };
 }
