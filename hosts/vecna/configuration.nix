@@ -56,7 +56,6 @@
     description = "jck";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      kitty
       spotify
       equibop
       wofi

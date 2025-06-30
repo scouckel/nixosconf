@@ -4,6 +4,7 @@
   imports = [
     ./git.nix
     ./vscodium.nix
+    ./kitty.nix
   ];
 
 }
