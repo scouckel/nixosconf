@@ -10,7 +10,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }@inputs:
   
   let
 
@@ -28,13 +28,13 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/vecna/configuration.nix
+          nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager { 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.jck = import ./hosts/vecna/home.nix;
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
-          nix-flatpak.nixosModules.nix-flatpak
         ];
       };
     };

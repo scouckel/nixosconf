@@ -9,5 +9,5 @@
     ];
 
     update.onActivation = true;
-  }
+  };
 }
