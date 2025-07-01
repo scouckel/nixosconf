@@ -43,17 +43,18 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-        
+    systemdIntegration = true;        
 
     settings = {
       exec-once = [
-        "systemctl --user start hyprpolkitagent"
+       # "systemctl --user start hyprpolkitagent"
       ];
 
       # environment variables
       env = [
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_SIZE,24"
+        "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
       ];
       
       monitor = ",preferred,auto,1";

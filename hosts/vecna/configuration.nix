@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/nixos/pipewire.nix
     ];
 
   # Bootloader.
@@ -62,6 +63,7 @@
       pwvucontrol
       nix-tree
       glances
+      hyprpolkitagent
     ];
   };
 
@@ -83,6 +85,9 @@
   # };
 
   programs.firefox.enable = true;
+
+  security.polkit.enable = true;
+  programs.hyprland.enable = true;
 
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
