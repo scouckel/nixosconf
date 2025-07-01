@@ -3,11 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-#    hyprland.url = "github:hyprwm/Hyprland";
-#    hyprland-plugins = {
-#      url = "github:hyprwm/hyprland-plugins";
-#      inputs.hyprland.follows = "hyprland";
-#    };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,6 +34,7 @@
             home-manager.users.jck = import ./hosts/vecna/home.nix;
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
+          nix-flatpak.nixosModules.nix-flatpak
         ];
       };
     };

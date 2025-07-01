@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/nixos/pipewire.nix
+      ../../modules/nixos/flatpak.nix
     ];
 
   # Bootloader.
@@ -63,7 +64,7 @@
       pwvucontrol
       nix-tree
       glances
-      hyprpolkitagent
+      lxqt.lxqt-policykit
     ];
   };
 

@@ -5,6 +5,7 @@
     ./decoration.nix
     ./binds.nix
     ./input.nix
+    ../programs/waybar.nix
   ];
 
   #fixing issues
@@ -47,7 +48,8 @@
 
     settings = {
       exec-once = [
-       "systemctl --user start hyprpolkitagent"
+        "lxqt-policykit-agent"
+        "waybar"
       ];
 
       # environment variables
