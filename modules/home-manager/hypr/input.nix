@@ -1,7 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     input = {
-      sensitivity = -0.2;
+      sensitivity = -0.6;
     };
   };
 }
