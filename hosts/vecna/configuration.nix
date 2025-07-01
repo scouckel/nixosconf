@@ -85,8 +85,6 @@
   #   enableSSHSupport = true;
   # };
 
-  programs.firefox.enable = true;
-
   security.polkit.enable = true;
   programs.hyprland.enable = true;
 
