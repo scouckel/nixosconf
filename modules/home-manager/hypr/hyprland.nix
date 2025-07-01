@@ -4,6 +4,7 @@
   imports = [
     ./decoration.nix
     ./binds.nix
+    ./input.nix
   ];
 
   #fixing issues
@@ -43,11 +44,10 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    systemdIntegration = true;        
 
     settings = {
       exec-once = [
-       # "systemctl --user start hyprpolkitagent"
+       "systemctl --user start hyprpolkitagent"
       ];
 
       # environment variables
