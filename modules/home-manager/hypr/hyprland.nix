@@ -85,6 +85,11 @@
         disable_hyprland_logo = false;
         vfr = true;
       };
+
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
+      };
     };
   };
 }

@@ -40,9 +40,10 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     pkgs.xfce.thunar
-    pkgs.kdePackages.kate
+    pkgs.kdePackages.kwrited
     pkgs.dconf 
     pkgs.bitwarden-desktop
+    pkgs.hyprshot
  ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -80,7 +81,21 @@
     # EDITOR = "emacs";
   };
 
- # wayland.windowManager.hyprland.enable = true;
+  xdg.desktopEntries.zen = {
+    name = "Zen";
+    exec = "/var/bin/flatpak/exports/bin/app.zen_browser.zen";
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "zen.desktop";
+      "x-scheme-handler/http" = "zen.desktop";
+      "x-scheme-handler/https" = "zen.desktop";
+      "x-scheme-handler/about" = "zen.desktop";
+      "x-scheme-handler/unknown" = "zen.desktop";
+    };
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
