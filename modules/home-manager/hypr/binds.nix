@@ -50,9 +50,13 @@
         bindl = [
           ", XF86AudioPrev, exec, playerctl --player=spotify previous"
           ", XF86AudioNext, exec, playerctl --player=spotify next"
-          ", XF86AudioPrev, exec, playerctl --player=spotify previous"
           ", XF86AudioPause, exec, playerctl --player=spotify play-pause"
           ", XF86AudioPlay, exec, playerctl --player=spotify play-pause"
+          "$mod, XF86AudioPrev, exec, playerctl --player=spotify loop none"
+          "$mod, XF86AudioPause, exec, playerctl --player=spotify loop playlist"
+          "$mod, XF86AudioPlay, exec, playerctl --player=spotify loop playlist"
+          "$mod, XF86AudioNext, exec, playerctl --player=spotify loop track"
+          "$mod, XF86AudioStop, exec, playerctl --player=spotify shuffle toggle"
           ", XF86AudioStop, exec, playerctl stop"
         ];
 
