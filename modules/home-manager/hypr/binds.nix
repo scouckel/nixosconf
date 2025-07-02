@@ -37,7 +37,7 @@
           "$mod SHIFT, 7, movetoworkspace, 7"
           "$mod SHIFT, 8, movetoworkspace, 8"
 
-
+          "$mod, L, exec, hyprctl dispatch dpms toggle"
 
           ", Print, exec, hyprshot -m region"
         ];
