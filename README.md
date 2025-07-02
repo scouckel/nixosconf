@@ -8,13 +8,13 @@ hosts:
 
 vecna is a large, forboding desktop in a corsair 4000D airflow. looks wholly evil. appropriately named after a most evil lich
 
-    ryzen 7800x3d
-    32 gb ram
-    rog strix motherboard (which i kinda hate)
-    xfx speedster 7900xtx
+- ryzen 7800x3d
+- 32 gb ram
+- rog strix motherboard (which i kinda hate)
+- xfx speedster 7900xtx
 
 xanathar ii (my laptop) is an hp pavilion from a few years ago, named so due to its omnipresence (at least in my backpack)
 
-    whatever is in one of those things
+- whatever is in one of those things
 
 hope you enjoy reading my config files
