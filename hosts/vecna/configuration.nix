@@ -87,6 +87,7 @@
 
   security.polkit.enable = true;
   programs.hyprland.enable = true;
+  services.playerctld.enable = true;
 
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];

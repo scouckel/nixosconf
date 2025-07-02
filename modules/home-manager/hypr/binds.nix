@@ -37,12 +37,29 @@
           "$mod SHIFT, 7, movetoworkspace, 7"
           "$mod SHIFT, 8, movetoworkspace, 8"
 
+
+
           ", Print, exec, hyprshot -m region"
         ];
 
         bindm = [
           "$mod, mouse:272, movewindow"
           "$mod, mouse:273, resizewindow"
+        ];
+
+        bindl = [
+          ", XF86AudioPrev, exec, playerctl --player=spotify previous"
+          ", XF86AudioNext, exec, playerctl --player=spotify next"
+          ", XF86AudioPrev, exec, playerctl --player=spotify previous"
+          ", XF86AudioPause, exec, playerctl --player=spotify play-pause"
+          ", XF86AudioPlay, exec, playerctl --player=spotify play-pause"
+          ", XF86AudioStop, exec, playerctl stop"
+        ];
+
+        bindel = [
+          "$mod,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+          "$mod,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+          ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ];
 
       };

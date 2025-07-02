@@ -24,6 +24,12 @@
         background: #16191C;
         color: #AAB2BF;
       }
+
+      label.module { 
+        padding: 0 10px;
+      }
     ";
+
+    # modules
   };
 }
