@@ -7,7 +7,7 @@
 
   profiles.default.extensions = with pkgs.vscode-extensions; [
     jnoortheen.nix-ide
-    pkief.material-icon-theme
+    vscode-icons-team.vscode-icons
     eamodio.gitlens
     wix.vscode-import-cost
     ms-vscode-remote.remote-ssh

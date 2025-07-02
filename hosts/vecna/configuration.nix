@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../../modules/nixos/pipewire.nix
       ../../modules/nixos/flatpak.nix
+      ../../modules/nixos/steam.nix
     ];
 
   # Bootloader.
