@@ -37,7 +37,7 @@
           "$mod SHIFT, 7, movetoworkspace, 7"
           "$mod SHIFT, 8, movetoworkspace, 8"
 
-          "$mod, L, exec, hyprctl dispatch dpms toggle"
+          
 
           ", Print, exec, hyprshot -m region"
         ];
@@ -58,6 +58,8 @@
           "$mod, XF86AudioNext, exec, playerctl --player=spotify loop track"
           "$mod, XF86AudioStop, exec, playerctl --player=spotify shuffle toggle"
           ", XF86AudioStop, exec, playerctl stop"
+
+          "$mod, L, exec, hyprctl dispatch dpms toggle"
         ];
 
         bindel = [
