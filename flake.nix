@@ -8,9 +8,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-flatpak, nur, ... }@inputs:
   
   let
 
@@ -35,6 +39,7 @@
             home-manager.users.jck = import ./hosts/vecna/home.nix;
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
+          nur.modules.nixos.default
         ];
       };
     };

@@ -11,6 +11,7 @@
       ../../modules/nixos/pipewire.nix
       ../../modules/nixos/flatpak.nix
       ../../modules/nixos/steam.nix
+      ../../modules/nixos/greetd.nix
     ];
 
   # Bootloader.
