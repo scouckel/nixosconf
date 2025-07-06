@@ -67,6 +67,20 @@
       nix-tree
       glances
       lxqt.lxqt-policykit
+      lxqt.lxqt-archiver
+      fastfetch
+      rsync
+      killall
+    ];
+  };
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      pkgs.jq
+      pkgs.unzip
+      pkgs.py7zr
+      pkgs.python3Full
     ];
   };
 
@@ -90,11 +104,19 @@
   security.polkit.enable = true;
   programs.hyprland.enable = true;
   services.playerctld.enable = true;
+  programs.xfconf.enable = true;
 
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
     trusted-substituters = ["https://hyprland.cachix.org"];
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
+
+  services.openssh = {
+    enable = true;
+    permitRootLogin = "no";
+    passwordAuthentication = true;
+    allowSFTP = true;
   };
 
   # List services that you want to enable:

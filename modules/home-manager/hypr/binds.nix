@@ -18,6 +18,7 @@
 
           "$mod, F, fullscreen"
           "$mod, J, pseudo,"
+          "$mod, T, togglefloating"
 
           "$mod, 1, workspace, 1"
           "$mod, 2, workspace, 2"

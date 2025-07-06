@@ -44,7 +44,13 @@
     pkgs.dconf 
     pkgs.bitwarden-desktop
     pkgs.hyprshot
- ];
+    pkgs.wine
+    pkgs.winetricks
+    pkgs.motrix
+    pkgs.prismlauncher
+  ];
+
+
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -79,6 +85,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    HYPRSHOT_DIR = "/home/jck/Documents/screenshots/";
   };
 
   xdg.desktopEntries.zen = {
