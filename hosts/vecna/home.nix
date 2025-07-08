@@ -85,7 +85,6 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-    HYPRSHOT_DIR = "/home/jck/Documents/screenshots/";
   };
 
   xdg.desktopEntries.zen = {

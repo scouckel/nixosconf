@@ -12,6 +12,7 @@
       ../../modules/nixos/flatpak.nix
       ../../modules/nixos/steam.nix
       ../../modules/nixos/greetd.nix
+      ../../modules/nixos/glances.nix
     ];
 
   # Bootloader.
@@ -65,12 +66,12 @@
       wofi
       pwvucontrol
       nix-tree
-      glances
       lxqt.lxqt-policykit
       lxqt.lxqt-archiver
       fastfetch
       rsync
       killall
+      unzip
     ];
   };
 
@@ -112,12 +113,12 @@
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
-  services.openssh = {
-    enable = true;
-    permitRootLogin = "no";
-    passwordAuthentication = true;
-    allowSFTP = true;
-  };
+#  services.openssh = {
+#    enable = true;
+#    permitRootLogin = "no";
+#    PasswordAuthentication = true;
+#    allowSFTP = true;
+#  };
 
   # List services that you want to enable:
 
