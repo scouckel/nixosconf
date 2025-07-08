@@ -48,6 +48,7 @@
     pkgs.winetricks
     pkgs.motrix
     pkgs.prismlauncher
+    pkgs.flashprint
   ];
 
 

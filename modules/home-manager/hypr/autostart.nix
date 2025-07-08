@@ -1,5 +1,7 @@
 { config, lib, inputs, ... }:
 
+# very broken, fix later
+
 {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
