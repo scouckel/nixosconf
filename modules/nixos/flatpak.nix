@@ -4,8 +4,8 @@
     enable = true;
 
     packages = [
-      "app.zen_browser.zen"
       "org.vinegarhq.Sober"
+      "org.kde.kwrite"
     ];
 
     update.onActivation = true;

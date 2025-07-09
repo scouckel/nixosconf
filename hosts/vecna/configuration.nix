@@ -72,6 +72,8 @@
       rsync
       killall
       unzip
+      p7zip
+      xsel
     ];
   };
 
