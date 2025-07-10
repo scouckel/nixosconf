@@ -1,7 +1,7 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  home.packages = {
+  home.packages = [
     pkgs.prismlauncher
-  };
+  ];
 }

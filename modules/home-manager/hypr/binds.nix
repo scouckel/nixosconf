@@ -41,7 +41,8 @@
           "$mod SHIFT, 8, movetoworkspace, 8"
           "$mod SHIFT, 9, movetoworkspace, 9"
           "$mod SHIFT, 0, movetoworkspace, 10"
-          
+
+          "$mod SHIFT, c, exec, xsel -bc"
 
           ", Print, exec, hyprshot -m region -o ~/Documents/screenshots"
           "$mod, Print, exec, hyprshot -m region --clipboard-only"
