@@ -7,32 +7,34 @@
     settings = {
       general = {
         disable_loading_bar = true;
-        grace = 300;
-        hide_cursor = true;
-        no_fade_in = false;
+        grace = 3;
+        hide_cursor = false;
+        no_fade_in = true;
       };
 
       background = [
         {
-          path = "screenshot";
-          blur_passes = 3;
-          blur_size = 8;
+          blur_passes = 1;
+          blur_size = 7;
         }
       ];
 
       input-field = [
         {
           size = "200, 50";
-          position = "0, -80";
-          monitor = "";
-          dots_center = true;
+          position = "0, 0";
           fade_on_empty = false;
-          font_color = "rgb(202, 211, 245)";
-          inner_color = "rgb(91, 96, 120)";
-          outer_color = "rgb(24, 25, 38)";
-          outline_thickness = 5;
-          placeholder_text = "Password...";
-          shadow_passes = 2;
+          font_color = "rgb(170, 178, 191)";
+          inner_color = "rgb(22, 25, 28)";
+          outer_color = "rgb(46,195,234)";
+          outline_thickness = 2;
+          rounding = 0;
+        }
+      ];
+
+      animations = [
+        {
+          enabled = false;
         }
       ];
     };

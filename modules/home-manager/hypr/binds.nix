@@ -9,7 +9,9 @@
         "$filem" = "thunar";
 
         bind = [
-          "$mod, M, exit,"         
+          "$mod, M, exit,"
+          "$mod, K, exec, hyprlock"
+          "$mod, P, exec, hyprpicker"
 
           "$mod, F1, exec, wofi --show drun"
           "$mod, F2, exec, $term"

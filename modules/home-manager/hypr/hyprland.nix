@@ -6,6 +6,8 @@
     ./binds.nix
     ./input.nix
     ../programs/waybar.nix
+    ./hyprlock.nix
+    ./hypridle.nix
   ];
 
   #fixing issues
@@ -58,8 +60,6 @@
         "HYPRCURSOR_SIZE,24"
         "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
       ];
-      
-      monitor = ",preferred,auto,1";
 
       general =  {
           gaps_in = 0;

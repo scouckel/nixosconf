@@ -59,6 +59,11 @@
     # EDITOR = "emacs";
   };
 
+  wayland.windowManager.hyprland.settings.monitor = [
+    "DP-3, 2560x1440@170.07100, 0x0, 1"
+    "HDMI-A-1, 1920x1080@74.97, 2560x0, 1"
+  ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

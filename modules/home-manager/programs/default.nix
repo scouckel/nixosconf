@@ -18,5 +18,8 @@
     pkgs.xfce.thunar
     pkgs.nur.repos.novel2430.zen-browser-bin
     pkgs.brave
+    pkgs.razergenie
+    pkgs.hyprpicker
+    pkgs.glances
   ];
 }

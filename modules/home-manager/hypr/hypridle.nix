@@ -1,16 +1,18 @@
 {
-  programs.hypridle = {
+  services.hypridle = {
     enable = true;
 
-    general = {
-      lock_cmd = "pidof hyprlock || hyprlock";
-    };
+    settings = {
+      general = {
+        lock_cmd = "pidof hyprlock || hyprlock";
+      };
 
-    listener = [
-      {
-        timeout = 240;
-        on-timeout = "hyprlock";
-      }
-    ];
+      listener = [
+        {
+          timeout = 240;
+          on-timeout = "hyprlock";
+        }
+      ];
+    };
   };
 }
