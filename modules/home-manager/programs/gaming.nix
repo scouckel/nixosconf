@@ -2,7 +2,7 @@
 
 {
   home.packages = [
-    pkgs.prismlauncher
+    pkgs.prismlauncher-unwrapped
     pkgs.cemu
     pkgs.ryujinx
   ];
