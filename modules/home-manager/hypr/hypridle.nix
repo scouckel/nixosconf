@@ -13,7 +13,7 @@
           on-timeout = "hyprlock";
         }
         {
-          timeout = 180;
+          timeout = 300;
           on-timeout = "hyprctl dispatch dpms off";
         }
       ];

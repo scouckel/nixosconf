@@ -11,7 +11,12 @@
     ";
 
     plugins = with pkgs.fishPlugins; [
-      { name = "grc"; src = grc.src }
+      { name = "grc"; src = grc.src; }
+      { name = "bang-bang"; src = bang-bang.src; }
     ];
   };
+
+  home.packages = with pkgs.fishPlugins; [
+    grc
+  ];
 }

@@ -64,6 +64,10 @@
     "HDMI-A-1, 1920x1080@74.97, 2560x0, 1"
   ];
 
+  dconf.settings."org/gnome/desktop/interface" = {
+    color-scheme = "prefer-dark";
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
