@@ -15,8 +15,23 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot"; # ← use the same mount point here.
+    };
+    grub = {
+      efiSupport = true;
+      device = "nodev";
+      useOSProber = true;
+    };
+  };
+  
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.initrd.availableKernelModules = [ "amdgpu" ];
+  hardware.firmware = with pkgs; [
+    linux-firmware
+  ];
 
   networking.hostName = "vecna"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
