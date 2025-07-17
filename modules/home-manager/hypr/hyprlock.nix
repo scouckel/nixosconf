@@ -7,7 +7,7 @@
     settings = {
       general = {
         disable_loading_bar = true;
-        grace = 3;
+        grace = 15;
         hide_cursor = false;
         no_fade_in = true;
       };
@@ -15,7 +15,7 @@
       background = [
         {
           path = "screenshot";
-          blur_passes = 1;
+          blur_passes = 3;
           blur_size = 7;
         }
       ];

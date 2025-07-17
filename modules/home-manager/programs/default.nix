@@ -5,6 +5,7 @@
     ./git.nix
     ./vscodium.nix
     ./kitty.nix
+    ./zen-browser.nix
   ];
 
   home.packages = [
@@ -16,7 +17,6 @@
     pkgs.motrix
     pkgs.flashprint
     pkgs.xfce.thunar
-    pkgs.nur.repos.novel2430.zen-browser-bin
     pkgs.brave
     pkgs.razergenie
     pkgs.hyprpicker
