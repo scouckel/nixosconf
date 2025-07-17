@@ -30,6 +30,7 @@
           outer_color = "rgb(46,195,234)";
           outline_thickness = 2;
           rounding = 0;
+          placeholder_text = "";
         }
       ];
 

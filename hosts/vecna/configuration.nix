@@ -76,13 +76,17 @@
     ];
   };
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
+
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
-      pkgs.jq
-      pkgs.unzip
-      pkgs.py7zr
-      pkgs.python3Full
+      jq
+      unzip
+      py7zr
+      python3Full
     ];
   };
 
