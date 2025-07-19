@@ -7,6 +7,7 @@
     ./kitty.nix
     ./zen-browser.nix
     ./obs.nix
+    ./spicetify.nix
   ];
 
   home.packages = with pkgs; [
@@ -21,5 +22,6 @@
     brave
     hyprpicker
     glances
+    equibop
   ];
 }

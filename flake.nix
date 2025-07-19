@@ -16,16 +16,10 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify.url = "github:Gerg-L/spicetify-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, nur, ... }@inputs:
-  
-  let
-
-    inherit (self) outputs;
-
-  in { 
-  
+  outputs = { nixpkgs, home-manager, nix-flatpak, nur, ... }@inputs: {
     # module import
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
@@ -33,7 +27,7 @@
     nixosConfigurations = {
     # desktop
       vecna = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = {inherit inputs;};
         modules = [
           ./hosts/vecna/configuration.nix
           nix-flatpak.nixosModules.nix-flatpak
