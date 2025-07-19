@@ -8,10 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/nixos/pipewire.nix
-      ../../modules/nixos/flatpak.nix
-      ../../modules/nixos/steam.nix
-      ../../modules/nixos/greetd.nix
+      ../../modules/nixos
+      ../../modules/nixos/gaming.nix
     ];
 
   # Bootloader.
@@ -33,6 +31,7 @@
     linux-firmware
   ];
 
+  system.name = "vecna";
   networking.hostName = "vecna"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
