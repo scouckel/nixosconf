@@ -10,13 +10,9 @@
       end
     ";
 
-    plugins = with pkgs.fishPlugins; [
-      { name = "grc"; src = grc.src; }
-      { name = "bang-bang"; src = bang-bang.src; }
+    plugins = [
+      { name = "grc"; src = pkgs.fishPlugins.grc; }
+      { name = "bang-bang"; src = pkgs.fishPlugins.bang-bang; }
     ];
   };
-
-  home.packages = with pkgs.fishPlugins; [
-    grc
-  ];
 }
