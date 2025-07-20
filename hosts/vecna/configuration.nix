@@ -31,6 +31,13 @@
     linux-firmware
   ];
 
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
+
+  services.xserver.videoDrivers = [ "amdgpu" ];
+
   system.name = "vecna";
   networking.hostName = "vecna"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

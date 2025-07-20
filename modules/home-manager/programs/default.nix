@@ -8,6 +8,7 @@
     ./zen-browser.nix
     ./obs.nix
     ./spicetify.nix
+    ./lf.nix
   ];
 
   home.packages = with pkgs; [
