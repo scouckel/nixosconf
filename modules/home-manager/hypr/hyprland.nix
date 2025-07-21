@@ -8,6 +8,7 @@
     ../programs/waybar.nix
     ./hyprlock.nix
     ./hypridle.nix
+    ./hyprpaper.nix
   ];
 
   #fixing issues
@@ -62,6 +63,8 @@
       exec-once = [
         "lxqt-policykit-agent"
         "waybar"
+        "hyprpaper"
+        "waypaper --restore"
       ];
 
       # environment variables

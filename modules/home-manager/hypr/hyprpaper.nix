@@ -1,11 +1,20 @@
+{ pkgs, ... }:
+
 {
+  home.packages = [ 
+    pkgs.hyprpaper
+    pkgs.waypaper 
+  ];
+
   services.hyprpaper = {
     enable = true;
 
     settings = {
-      
-    }
-  };
+      ipc = "on";
+      splash = false;
 
-  home.packages = [ pkgs.waypaper ];
+      preload = [ "~/nixosconf/modules/home-manager/hypr/camdenyards.jpg" ];
+      wallpaper = [ ", ~/nixosconf/modules/home-manager/hypr/camdenyards.jpg" ];
+    };
+  };
 }
