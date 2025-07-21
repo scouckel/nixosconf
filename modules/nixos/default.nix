@@ -4,5 +4,6 @@
     ./flatpak.nix
     ./greetd.nix
     ./xdg.portal.nix
+    ./bluetooth.nix
   ];
 }

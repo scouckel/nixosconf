@@ -11,7 +11,7 @@
 
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --user-menu";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --user-menu -t --asterisks -c Hyprland";
       };
     };
   };
