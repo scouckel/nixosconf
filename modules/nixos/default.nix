@@ -5,5 +5,6 @@
     ./greetd.nix
     ./xdg.portal.nix
     ./bluetooth.nix
+    ./thunar.nix
   ];
 }
