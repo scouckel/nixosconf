@@ -80,33 +80,6 @@
     isNormalUser = true;
     description = "jck";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      wofi
-      pwvucontrol
-      nix-tree
-      lxqt.lxqt-policykit
-      lxqt.lxqt-archiver
-      fastfetch
-      rsync
-      killall
-      unzip
-      p7zip
-      xsel
-    ];
-  };
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-  ];
-
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      jq
-      unzip
-      py7zr
-      python3Full
-    ];
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -121,17 +94,10 @@
 
   security.polkit.enable = true;
   services.playerctld.enable = true;
-  programs.xfconf.enable = true;
-
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  };
 
   services.openssh = {
     enable = true;
-    # permitRootLogin = "no";
+    permitRootLogin = "no";
     # PasswordAuthentication = true;
     # allowSFTP = true;
   };

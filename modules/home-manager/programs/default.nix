@@ -19,10 +19,11 @@
     winetricks
     motrix
     flashprint
-    xfce.thunar
+    gvfs
     brave
     hyprpicker
     glances
     equibop
+    openvpn
   ];
 }

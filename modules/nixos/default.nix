@@ -7,4 +7,32 @@
     ./bluetooth.nix
     ./thunar.nix
   ];
+
+  users.users.jck.programs = with pkgs; [
+    wofi
+    pwvucontrol
+    nix-tree
+    lxqt.lxqt-policykit
+    lxqt.lxqt-archiver
+    fastfetch
+    rsync
+    killall
+    unzip
+    p7zip
+    xsel
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      jq
+      unzip
+      py7zr
+      python3Full
+    ];
+  };
 }
