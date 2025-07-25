@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ./pipewire.nix
@@ -8,7 +10,7 @@
     ./thunar.nix
   ];
 
-  users.users.jck.programs = with pkgs; [
+  users.users.jck.packages = with pkgs; [
     wofi
     pwvucontrol
     nix-tree
@@ -20,6 +22,7 @@
     unzip
     p7zip
     xsel
+    rar
   ];
 
   fonts.packages = with pkgs; [
