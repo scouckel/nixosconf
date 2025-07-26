@@ -20,9 +20,10 @@
     rsync
     killall
     unzip
-    p7zip
+    p7zip-rar
     xsel
-    rar
+    unar
+    unrar-wrapper
   ];
 
   fonts.packages = with pkgs; [

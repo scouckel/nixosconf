@@ -3,6 +3,7 @@
 {
   programs.steam = {
     enable = true;
+    package = pkgs.steam;
     protontricks.enable = true;
 
     extraCompatPackages = with pkgs; [

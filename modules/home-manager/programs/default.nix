@@ -25,5 +25,6 @@
     glances
     equibop
     openvpn
+    qbittorrent
   ];
 }
