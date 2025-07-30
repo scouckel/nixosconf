@@ -26,5 +26,6 @@
     equibop
     openvpn
     qbittorrent
+    zoom-us
   ];
 }
