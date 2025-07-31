@@ -13,6 +13,12 @@
 
   #fixing issues
 
+  home.packages = with pkgs; [
+    pyprland
+  ];
+
+  home.file.".config/hypr/pyprland.toml".source = ./pyprland.toml;
+
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 
   home.pointerCursor = {
@@ -66,6 +72,7 @@
         "waybar"
         "hyprpaper"
         "waypaper --restore"
+        "pypr"
       ];
 
       # environment variables

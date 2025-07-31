@@ -13,6 +13,7 @@
       ms-vscode-remote.remote-ssh
       tomoki1207.pdf
       mechatroner.rainbow-csv
+      tamasfe.even-better-toml
     ];
   };
 }
