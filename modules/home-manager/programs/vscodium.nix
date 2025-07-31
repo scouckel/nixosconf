@@ -14,6 +14,8 @@
       tomoki1207.pdf
       mechatroner.rainbow-csv
       tamasfe.even-better-toml
+      ms-vscode-remote.remote-ssh-edit
+      redhat.vscode-yaml
     ];
   };
 }
