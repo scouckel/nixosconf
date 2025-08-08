@@ -23,7 +23,7 @@
     brave
     hyprpicker
     glances
-    equibop
+    discord
     openvpn
     qbittorrent
     zoom-us
