@@ -26,7 +26,6 @@
   };
   
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.initrd.availableKernelModules = [ "amdgpu" ];
   hardware.firmware = with pkgs; [
     linux-firmware
   ];
@@ -35,8 +34,6 @@
     enable = true;
     enable32Bit = true;
   };
-
-  services.xserver.videoDrivers = [ "amdgpu" ];
 
   system.name = "xanathar";
   networking.hostName = "xanathar"; # Define your hostname.
