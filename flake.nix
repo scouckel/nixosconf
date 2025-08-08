@@ -40,6 +40,20 @@
           nur.modules.nixos.default
         ];
       };
+      xanathar = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/xanathar/configuration.nix
+          nix-flatpak.nixosModules.nix-flatpak
+          home-manager.nixosModules.home-manager { 
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jck = import ./hosts/xanathar/home.nix;
+            home-manager.extraSpecialArgs = {inherit inputs;};
+          }
+          nur.modules.nixos.default
+        ];
+      };
     };
     
   };
