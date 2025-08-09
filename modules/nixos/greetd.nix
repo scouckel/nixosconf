@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    greetd.tuigreet
+    tuigreet
     seatd
   ];
 
@@ -11,7 +11,7 @@
 
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --user-menu -t --asterisks -c Hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --user-menu -t --asterisks -c Hyprland";
       };
     };
   };
