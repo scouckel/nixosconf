@@ -66,6 +66,7 @@
       ", XF86AudioStop, exec, playerctl stop"
 
       "$mod, L, exec, hyprctl dispatch dpms toggle"
+      ",switch:Lid Switch, exec, pidof hyprlock || hyprlock"
     ];
 
     bindel = [
