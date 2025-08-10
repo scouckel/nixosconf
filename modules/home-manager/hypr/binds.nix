@@ -5,7 +5,6 @@
     "$filem" = "thunar";
 
     bind = [
-      "$mod, M, exit,"
       "$mod, K, exec, hyprlock"
       "$mod, P, exec, hyprpicker"
       "$mod, RETURN, exec, pypr toggle kitty"
@@ -67,6 +66,10 @@
 
       "$mod, L, exec, hyprctl dispatch dpms toggle"
       ",switch:Lid Switch, exec, pidof hyprlock || hyprlock"
+      ", XF86MonBrightnessUp, exec, brightnessctl set 10%+"
+      ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+
+      "$mod, M, exit,"
     ];
 
     bindel = [

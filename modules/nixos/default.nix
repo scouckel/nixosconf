@@ -24,6 +24,7 @@
     xsel
     unar
     unrar-wrapper
+    brightnessctl
   ];
 
   fonts.packages = with pkgs; [
