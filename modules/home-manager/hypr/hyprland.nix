@@ -14,7 +14,7 @@
   #fixing issues
 
   home.packages = with pkgs; [
-    pyprland
+    # pyprland
   ];
 
   home.file.".config/hypr/pyprland.toml".source = ./pyprland.toml;
@@ -72,7 +72,7 @@
         "waybar"
         "hyprpaper"
         "waypaper --restore"
-        "pypr"
+        # "pypr"
       ];
 
       # environment variables

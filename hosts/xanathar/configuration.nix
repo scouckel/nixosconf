@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, lib, inputs, ... }:
 
 {
@@ -22,7 +18,7 @@
       efiSupport = true;
       device = "nodev";
       useOSProber = true;
-      theme = "${pkgs.fetchFromGitHub {
+      theme = "${pkgs.fetchFromGitHub { # blue screen of life grub theme
         owner = "harishnkr";
         repo = "bsol";
         rev = "8f39f66967e2391b11ee554578f0b821070ec72a";
@@ -42,8 +38,7 @@
   };
 
   system.name = "xanathar";
-  networking.hostName = "xanathar"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "xanathar";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

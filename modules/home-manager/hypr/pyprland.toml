@@ -1,7 +1,6 @@
 [pyprland]
 plugins = [
-    "scratchpads",
-    "expose"
+    "scratchpads"
 ]
 
 [scratchpads.kitty]
@@ -10,3 +9,4 @@ command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
 size = "75% 60%"
 max_size = "1920px 100%"
+lazy = true

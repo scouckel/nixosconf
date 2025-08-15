@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, lib, inputs, ... }:
 
 {
@@ -22,7 +18,7 @@
       efiSupport = true;
       device = "nodev";
       useOSProber = true;
-      theme = "${pkgs.fetchFromGitHub {
+      theme = "${pkgs.fetchFromGitHub { # blue screen of life grub theme
         owner = "harishnkr";
         repo = "bsol";
         rev = "8f39f66967e2391b11ee554578f0b821070ec72a";
@@ -32,37 +28,36 @@
   };
   
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # amd gpu config
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages =  with pkgs; [ 
+      rocmPackages.clr.icd
+      libva
+    ];
+  };
   boot.initrd.availableKernelModules = [ "amdgpu" ];
   hardware.firmware = with pkgs; [
     linux-firmware
   ];
-
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-
+  boot.extraModprobeConfig = "options amdgpu ppfeaturemask=0xffffffff\n";
+  environment.systemPackages = with pkgs; [ lact ];
+  systemd.packages = with pkgs; [ lact ];
+  systemd.services.lactd.wantedBy = ["multi-user.target"];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
+  # networking
   system.name = "vecna";
-  networking.hostName = "vecna"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "vecna";
+  networking.networkmanager.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
+  # localization
   time.timeZone = "America/New_York";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -75,13 +70,11 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jck = {
     isNormalUser = true;
     description = "jck";

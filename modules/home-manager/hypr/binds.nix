@@ -7,7 +7,7 @@
     bind = [
       "$mod, K, exec, hyprlock"
       "$mod, P, exec, hyprpicker"
-      "$mod, RETURN, exec, pypr toggle kitty"
+      # "$mod, RETURN, exec, pypr toggle kitty"
 
       "$mod, F1, exec, wofi --show drun"
       "$mod, F2, exec, $term"
