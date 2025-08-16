@@ -16,7 +16,6 @@
     nix-tree
     lxqt.lxqt-policykit
     lxqt.lxqt-archiver
-    fastfetch
     rsync
     killall
     unzip

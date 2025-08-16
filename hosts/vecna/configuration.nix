@@ -42,7 +42,8 @@
   hardware.firmware = with pkgs; [
     linux-firmware
   ];
-  boot.extraModprobeConfig = "options amdgpu ppfeaturemask=0xffffffff\n";
+  # boot.extraModprobeConfig = "options amdgpu ppfeaturemask=0xffffffff\n";
+  hardware.amdgpu.overdrive.enable = true;
   environment.systemPackages = with pkgs; [ lact ];
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
@@ -52,8 +53,6 @@
   system.name = "vecna";
   networking.hostName = "vecna";
   networking.networkmanager.enable = true;
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # localization
   time.timeZone = "America/New_York";
@@ -82,6 +81,11 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    auto-optimise-store = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

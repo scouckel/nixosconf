@@ -9,6 +9,7 @@
     ./obs.nix
     ./spicetify.nix
     ./lf.nix
+    ./fastfetch.nix
   ];
 
   home.packages = with pkgs; [

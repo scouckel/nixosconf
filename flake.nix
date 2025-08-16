@@ -40,6 +40,7 @@
           nur.modules.nixos.default
         ];
       };
+      # laptop
       xanathar = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
