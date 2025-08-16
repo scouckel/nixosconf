@@ -4,19 +4,19 @@
 
     settings = {
       logo = {
-        source = ./fastfetch-logo.txt;
+        source = ./fastfetch-logo.txt; # ascii art by Joan G. Stark
         padding = {
           right = 2;
           left = 1;
           top = 2;
         };
         color = {
-          "1" = "yellow";
+          "1" = "bright_green";
         };
       };
 
       display = {
-
+        color = "bright_green";
       };
 
       modules = [
@@ -32,6 +32,7 @@
           key = "Time";
           format = "{hour-pretty}:{minute-pretty}:{second-pretty}, {timezone-name}, UTC{offset-from-utc}";
         }
+        "uptime"
         {
           type = "battery";
           key = "Battery";
@@ -41,7 +42,6 @@
         "os"
         "host"
         "kernel"
-        "uptime"
         "packages"
         "shell"
         "display"
@@ -53,6 +53,7 @@
         "swap"
         "disk"
         "localip"
+        "publicip"
         "break"
         "colors"
       ];
