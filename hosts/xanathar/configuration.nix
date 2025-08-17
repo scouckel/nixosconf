@@ -80,6 +80,14 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  services.thermald.enable = true;
+
+  services.logind = {
+    lidSwitch = "poweroff";
+    lidSwitchExternalPower = "lock";
+    lidSwitchDocked = "ignore";
+  };
+
   services.auto-cpufreq = {
     enable = true;
     settings = {
