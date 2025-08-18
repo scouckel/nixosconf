@@ -82,11 +82,11 @@
 
   services.thermald.enable = true;
 
-  services.logind = {
-    lidSwitch = "poweroff";
-    lidSwitchExternalPower = "lock";
-    lidSwitchDocked = "ignore";
-  };
+  # services.logind = {
+  #   lidSwitch = "poweroff";
+  #   lidSwitchExternalPower = "lock";
+  #   lidSwitchDocked = "ignore";
+  # };
 
   services.auto-cpufreq = {
     enable = true;
