@@ -23,7 +23,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nix-flatpak, nur, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, ... }@inputs: {
     # module import
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;

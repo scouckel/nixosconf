@@ -16,6 +16,10 @@
           sensitivity = 0;
         }
         { # vecna mouse
+          name = "razer-razer-deathadder-v2-x-hyperspeed-1";
+          sensitivity = -0.7;
+        }
+        { # vecna mouse depending on how its feeling
           name = "razer-razer-deathadder-v2-x-hyperspeed";
           sensitivity = -0.7;
         }
