@@ -28,5 +28,7 @@
     openvpn
     qbittorrent
     zoom-us
+    obsidian
+    cryptomator
   ];
 }

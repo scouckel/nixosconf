@@ -57,6 +57,7 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
           nur.modules.nixos.default
+          auto-cpufreq.nixosModules.default
         ];
       };
     };
