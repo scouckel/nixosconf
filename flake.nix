@@ -31,12 +31,16 @@
         modules = [
           ./hosts/vecna/configuration.nix
           ./modules/nixos
-          ./modules/home-manager
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager { 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.jck = import ./hosts/vecna/home.nix;
+            home-manager.users.jck = {
+              imports = [
+                ./hosts/vecna/home.nix
+                ./modules/home-manager
+              ];
+            };
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
           nur.modules.nixos.default
@@ -48,12 +52,16 @@
         modules = [
           ./hosts/xanathar/configuration.nix
           ./modules/nixos
-          ./modules/home-manager
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager { 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.jck = import ./hosts/xanathar/home.nix;
+            home-manager.users.jck = {
+              imports = [
+                ./hosts/vecna/home.nix
+                ./modules/home-manager
+              ];
+            };
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
           nur.modules.nixos.default
@@ -61,7 +69,5 @@
         ];
       };
     };
-    
   };
-
 }
