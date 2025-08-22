@@ -1,12 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ../../modules/home-manager/hypr/hyprland.nix
-    ../../modules/home-manager/programs
-    ../../modules/home-manager/programs/gaming.nix
-  ];
-
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jck";
@@ -58,6 +52,9 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+  hyprland.enable = true;
+  gaming.enable = true;
 
   wayland.windowManager.hyprland.settings = {
     monitor = [

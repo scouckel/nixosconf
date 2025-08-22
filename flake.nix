@@ -24,16 +24,14 @@
   };
 
   outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, ... }@inputs: {
-    # module import
-    nixosModules = import ./modules/nixos;
-    homeManagerModules = import ./modules/home-manager;
-
     nixosConfigurations = {
     # desktop
       vecna = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/vecna/configuration.nix
+          ./modules/nixos
+          ./modules/home-manager
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager { 
             home-manager.useGlobalPkgs = true;
@@ -49,6 +47,8 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/xanathar/configuration.nix
+          ./modules/nixos
+          ./modules/home-manager
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager { 
             home-manager.useGlobalPkgs = true;

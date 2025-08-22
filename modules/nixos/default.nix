@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   imports = [
@@ -8,6 +8,7 @@
     ./xdg.portal.nix
     ./bluetooth.nix
     ./thunar.nix
+    ./gaming.nix
   ];
 
   users.users.jck.packages = with pkgs; [
@@ -45,5 +46,22 @@
     clean.enable = true;
     clean.extraArgs = "--keep-since 3d --keep 3";
     flake = "/home/jck/nixosconf/";
+  };
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      brlaser
+      gutenprint
+      brgenml1lpr
+      brgenml1cupswrapper
+      pkgs.cnijfilter2
+    ];
+  };
+  
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
   };
 }

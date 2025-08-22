@@ -1,7 +1,8 @@
-{ config, pkgs, lib, inputs, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   imports = [
+    ./hypr
     ./git.nix
     ./vscodium.nix
     ./kitty.nix
@@ -10,6 +11,7 @@
     ./spicetify.nix
     ./lf.nix
     ./fastfetch.nix
+    ./gaming.nix
   ];
 
   home.packages = with pkgs; [
