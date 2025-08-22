@@ -1,12 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ../../modules/home-manager/hypr/hyprland.nix
-    ../../modules/home-manager/programs
-    ../../modules/home-manager/programs/gaming.nix
-  ];
-
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jck";
