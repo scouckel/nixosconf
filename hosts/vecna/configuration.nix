@@ -84,6 +84,8 @@
     auto-optimise-store = true;
   };
 
+  environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
+
   gaming.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are

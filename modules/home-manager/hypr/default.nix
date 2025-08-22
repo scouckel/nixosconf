@@ -18,6 +18,20 @@
   config = lib.mkIf config.hyprland.enable {
     #fixing issues
 
+    xdg.portal = {
+      enable = true;
+
+      config = {
+        common = {
+          default = [ "hyprland" ];
+        };
+      };
+
+      extraPortals = with pkgs; [ 
+        xdg-desktop-portal-hyprland
+      ];
+    };
+
     home.packages = with pkgs; [
       # pyprland
     ];
