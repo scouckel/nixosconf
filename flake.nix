@@ -58,7 +58,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.jck = {
               imports = [
-                ./hosts/vecna/home.nix
+                ./hosts/xanathar/home.nix
                 ./modules/home-manager
               ];
             };
