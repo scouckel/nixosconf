@@ -10,6 +10,7 @@
     ./obs.nix
     ./spicetify.nix
     ./lf.nix
+    ./yazi.nix
     ./fastfetch.nix
     ./gaming.nix
   ];

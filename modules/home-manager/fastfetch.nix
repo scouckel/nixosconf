@@ -53,7 +53,6 @@
         "swap"
         "disk"
         "localip"
-        "publicip"
         "break"
         "colors"
       ];
