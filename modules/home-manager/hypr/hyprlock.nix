@@ -15,7 +15,7 @@
         background = [
           {
             path = "screenshot";
-            blur_passes = 3;
+            blur_passes = 4;
             blur_size = 7;
           }
         ];
