@@ -70,10 +70,14 @@
       "6,monitor:eDP-1"
       "7,monitor:eDP-1"
       "8,monitor:eDP-1"
-      "9,monitor:eDP-1"
-      "10,monitor:eDP-1"
     ];
   };
+
+  programs.hyprlock.input-field = [
+    {
+      monitor = eDP-1;
+    }
+  ];
 
   dconf.settings."org/gnome/desktop/interface" = {
     color-scheme = "prefer-dark";
