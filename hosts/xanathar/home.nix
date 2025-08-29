@@ -73,9 +73,9 @@
     ];
   };
 
-  programs.hyprlock.input-field = [
+  programs.hyprlock.settings.input-field = [
     {
-      monitor = eDP-1;
+      monitor = "eDP-1";
     }
   ];
 
