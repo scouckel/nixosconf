@@ -73,12 +73,6 @@
     ];
   };
 
-  programs.hyprlock.settings.input-field = [
-    {
-      monitor = "eDP-1";
-    }
-  ];
-
   dconf.settings."org/gnome/desktop/interface" = {
     color-scheme = "prefer-dark";
   };
