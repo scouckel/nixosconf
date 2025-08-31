@@ -9,6 +9,7 @@
     ./bluetooth.nix
     ./thunar.nix
     ./gaming.nix
+    ./nix-ld.nix
   ];
 
   users.users.jck.packages = with pkgs; [
@@ -30,16 +31,6 @@
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
   ];
-
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      jq
-      unzip
-      py7zr
-      python3Full
-    ];
-  };
 
   programs.nh = {
     enable = true;
