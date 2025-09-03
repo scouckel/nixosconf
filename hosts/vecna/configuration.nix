@@ -49,8 +49,13 @@
   # networking
   system.name = "vecna";
   networking.hostName = "vecna";
-  networking.networkmanager.enable = true;
-
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-openvpn
+    ];
+  };
+  
   # localization
   time.timeZone = "US/Central";
   i18n.defaultLocale = "en_US.UTF-8";

@@ -13,6 +13,7 @@
     ./hyprlock.nix
     ./hypridle.nix
     ./hyprpaper.nix
+    ./rofi-hyprland.nix
   ];
 
   config = lib.mkIf config.hyprland.enable {

@@ -13,7 +13,6 @@
   ];
 
   users.users.jck.packages = with pkgs; [
-    wofi
     pwvucontrol
     nix-tree
     lxqt.lxqt-policykit

@@ -33,5 +33,6 @@
     zoom-us
     obsidian
     cryptomator
+    networkmanagerapplet
   ];
 }

@@ -12,7 +12,11 @@
         
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "pulseaudio" "network" "clock" ];
+        modules-right = [ "pulseaudio" "clock" ];
+
+        "hyprland/window" = {
+          on-click = "rofi -show window";
+        };
       };
     };
 
@@ -31,7 +35,5 @@
         padding: 0 10px;
       }
     ";
-
-    # modules
   };
 }

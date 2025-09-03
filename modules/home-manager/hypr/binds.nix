@@ -8,17 +8,16 @@
       "$filem" = "thunar";
 
       bind = [
-        "$mod, K, exec, hyprlock"
+        "$mod SHIFT, K, exec, hyprlock"
         "$mod, P, exec, hyprpicker"
         # "$mod, RETURN, exec, pypr toggle kitty"
 
-        "$mod, F1, exec, wofi --show drun"
+        "$mod, F1, exec, rofi -show drun"
         "$mod, F2, exec, $term"
         "$mod, F3, exec, $filem"
         "$mod, F4, killactive,"
 
         "$mod, F, fullscreen"
-        "$mod, J, pseudo,"
         "$mod, T, togglefloating"
 
         "$mod, 1, workspace, 1"
@@ -42,6 +41,11 @@
         "$mod SHIFT, 8, movetoworkspace, 8"
         "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 0, movetoworkspace, 10"
+
+        "$mod, H, movefocus, l"
+        "$mod, J, movefocus, d"
+        "$mod, K, movefocus, u"
+        "$mod, L, movefocus, r"
 
         "$mod SHIFT, c, exec, xsel -bc"
 
@@ -67,7 +71,7 @@
         "$mod, XF86AudioStop, exec, playerctl --player=spotify shuffle toggle"
         ", XF86AudioStop, exec, playerctl stop"
 
-        "$mod, L, exec, hyprctl dispatch dpms toggle"
+        "$mod SHIFT, L, exec, hyprctl dispatch dpms toggle"
         ",switch:Lid Switch, exec, pidof hyprlock || hyprlock"
         ", XF86MonBrightnessUp, exec, brightnessctl set 10%+"
         ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"

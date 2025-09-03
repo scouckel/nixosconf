@@ -16,6 +16,7 @@
       tamasfe.even-better-toml
       ms-vscode-remote.remote-ssh-edit
       redhat.vscode-yaml
+      vscodevim.vim
     ];
   };
 }
