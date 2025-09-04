@@ -34,5 +34,7 @@
     obsidian
     cryptomator
     networkmanagerapplet
+    libreoffice
+    gimp3
   ];
 }
