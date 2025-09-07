@@ -36,5 +36,7 @@
     networkmanagerapplet
     libreoffice
     gimp3
+    vlc
+    chromium
   ];
 }

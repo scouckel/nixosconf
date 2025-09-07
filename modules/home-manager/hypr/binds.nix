@@ -49,8 +49,8 @@
 
         "$mod SHIFT, c, exec, xsel -bc"
 
-        ", Print, exec, hyprshot -m region -o ~/Documents/screenshots"
-        "$mod, Print, exec, hyprshot -m region --clipboard-only"
+        "$mod, F12, exec, hyprshot -m region -o ~/Documents/screenshots"
+        "$mod SHIFT, F12, exec, hyprshot -m region --clipboard-only"
       ];
 
       bindm = [
