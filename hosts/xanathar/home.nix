@@ -71,6 +71,10 @@
       "7,monitor:eDP-1"
       "8,monitor:eDP-1"
     ];
+
+    misc = {
+      vrr = 1;
+    };
   };
 
   dconf.settings."org/gnome/desktop/interface" = {
