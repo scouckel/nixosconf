@@ -13,14 +13,16 @@
       tamasfe.even-better-toml
       redhat.java
  
-      # basic extensions      
-      vscode-icons-team.vscode-icons
+      # functionality extensions
       eamodio.gitlens
       wix.vscode-import-cost
       ms-vscode-remote.remote-ssh
-      mechatroner.rainbow-csv
       ms-vscode-remote.remote-ssh-edit
       vscodevim.vim
+
+      # appearance extensions
+      mechatroner.rainbow-csv
+      vscode-icons-team.vscode-icons
     ];
   };
 }
