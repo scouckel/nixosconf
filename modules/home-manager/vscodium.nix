@@ -6,16 +6,20 @@
     package = pkgs.vscodium;
 
     profiles.default.extensions = with pkgs.vscode-extensions; [
+      # languages
       jnoortheen.nix-ide
+      tomoki1207.pdf
+      redhat.vscode-yaml
+      tamasfe.even-better-toml
+      redhat.java
+ 
+      # basic extensions      
       vscode-icons-team.vscode-icons
       eamodio.gitlens
       wix.vscode-import-cost
       ms-vscode-remote.remote-ssh
-      tomoki1207.pdf
       mechatroner.rainbow-csv
-      tamasfe.even-better-toml
       ms-vscode-remote.remote-ssh-edit
-      redhat.vscode-yaml
       vscodevim.vim
     ];
   };
