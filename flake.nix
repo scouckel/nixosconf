@@ -67,6 +67,27 @@
           nur.modules.nixos.default
           auto-cpufreq.nixosModules.default
         ];
+      };      
+      tiamat = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/tiamat/configuration.nix
+          ./modules/nixos
+          nix-flatpak.nixosModules.nix-flatpak
+          home-manager.nixosModules.home-manager { 
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jck = {
+              imports = [
+                ./hosts/tiamat/home.nix
+                ./modules/home-manager
+              ];
+            };
+            home-manager.extraSpecialArgs = {inherit inputs;};
+          }
+          nur.modules.nixos.default
+          auto-cpufreq.nixosModules.default
+        ];
       };
     };
   };
