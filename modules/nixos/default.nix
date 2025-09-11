@@ -54,4 +54,7 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+
+  programs.partition-manager.enable = true;
+  services.udisks2.enable = true;
 }

@@ -8,6 +8,7 @@
           touchpad = {
             natural_scroll = true;
           };
+          accel_profile = "flat";
         };
         gestures = {
           workspace_swipe = true;
@@ -20,11 +21,15 @@
           }
           { # vecna mouse
             name = "razer-razer-deathadder-v2-x-hyperspeed-1";
-            sensitivity = -0.7;
+            sensitivity = -0.35;
           }
-          { # vecna mouse depending on how its feeling
+          { # vecna mouse depending on how it's feeling
             name = "razer-razer-deathadder-v2-x-hyperspeed";
-            sensitivity = -0.7;
+            sensitivity = -0.35;
+          }
+          { # i can't believe its this finnicky
+            name = "razer-razer-deathadder-v2-x-hyperspeed-mouse";
+            sensitivity = -0.35;
           }
         ];
       };
