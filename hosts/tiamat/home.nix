@@ -57,20 +57,20 @@
   gaming.enable = true;
 
   wayland.windowManager.hyprland.settings = {
-    monitor = [
-      "eDP-1, 1920x1080@40, 0x0, 1"
-    ];
+   monitor = [
+     "eDP-1, 2256x1504@60, 0x0, 1.333333"
+   ];
 
-    workspace = [
-      "1,monitor:eDP-1"
-      "2,monitor:eDP-1"
-      "3,monitor:eDP-1"
-      "4,monitor:eDP-1"
-      "5,monitor:eDP-1"
-      "6,monitor:eDP-1"
-      "7,monitor:eDP-1"
-      "8,monitor:eDP-1"
-    ];
+   workspace = [
+     "1,monitor:eDP-1"
+     "2,monitor:eDP-1"
+     "3,monitor:eDP-1"
+     "4,monitor:eDP-1"
+     "5,monitor:eDP-1"
+     "6,monitor:eDP-1"
+     "7,monitor:eDP-1"
+     "8,monitor:eDP-1"
+   ];
 
     misc = {
       vrr = 1;

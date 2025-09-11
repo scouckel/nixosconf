@@ -132,6 +132,12 @@
           preserve_split = true;
         };
       };
+ 
+      extraConfig = "
+        xwayland {
+          force_zero_scaling = true;
+        }
+      ";   
     };
   };
 }
