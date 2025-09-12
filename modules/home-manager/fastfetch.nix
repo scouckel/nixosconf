@@ -36,7 +36,7 @@
         {
           type = "battery";
           key = "Battery";
-          format = "{capacity} [{status}]";
+          format = "{capacity}, {time-formatted} [{status}]";
         }
         "separator"
         "os"
