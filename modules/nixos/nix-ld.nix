@@ -26,7 +26,7 @@
       jq
       unzip
       py7zr
-      python3Full
+      # python3Full
     ];
   };
 }

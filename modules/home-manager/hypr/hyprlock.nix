@@ -15,6 +15,7 @@
         background = [
           {
             path = "screenshot";
+            # path = ~/.config/hypr/wallpaper_effects/.wallpaper_current;
             blur_passes = 4;
             blur_size = 7;
           }
@@ -30,7 +31,7 @@
             outer_color = "rgb(46,195,234)";
             outline_thickness = 2;
             rounding = 0;
-            placeholder_text = "";
+            placeholder_text = "🔒🔒🔒";
           }
         ];
 

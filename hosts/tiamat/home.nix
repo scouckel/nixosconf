@@ -77,6 +77,11 @@
     };
   };
 
+  programs.hyprlock.settings.auth = {
+    fingerprint.enabled = true;
+    fingerprint.present_message = "scanning finger";
+  };
+
   dconf.settings."org/gnome/desktop/interface" = {
     color-scheme = "prefer-dark";
   };

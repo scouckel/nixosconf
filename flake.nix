@@ -21,9 +21,10 @@
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, nixos-hardware, ... }@inputs: {
     nixosConfigurations = {
     # desktop
       vecna = nixpkgs.lib.nixosSystem {
@@ -87,6 +88,7 @@
           }
           nur.modules.nixos.default
           auto-cpufreq.nixosModules.default
+          nixos-hardware.nixosModules.framework-13-7040-amd
         ];
       };
     };
