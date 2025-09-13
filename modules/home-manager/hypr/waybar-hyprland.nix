@@ -12,7 +12,7 @@
         
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "pulseaudio" "clock" ];
+        modules-right = [ "pulseaudio" "battery" "clock" ];
 
         "hyprland/window" = {
           on-click = "rofi -show window";

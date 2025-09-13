@@ -49,6 +49,8 @@
 
         "$mod SHIFT, c, exec, xsel -bc"
 
+        "$mod, C, exec, rofi -show calc"
+
         "$mod, F12, exec, hyprshot -m region -o ~/Documents/screenshots"
         "$mod SHIFT, F12, exec, hyprshot -m region --clipboard-only"
       ];
