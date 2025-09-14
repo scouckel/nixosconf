@@ -11,7 +11,7 @@
           accel_profile = "flat";
         };
         gestures = {
-          workspace_swipe = true;
+          workspace = true;
         };
 
         device = [
