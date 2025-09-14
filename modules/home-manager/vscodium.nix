@@ -5,24 +5,34 @@
     enable = true;
     package = pkgs.vscodium;
 
-    profiles.default.extensions = with pkgs.vscode-extensions; [
-      # languages
-      jnoortheen.nix-ide
-      tomoki1207.pdf
-      redhat.vscode-yaml
-      tamasfe.even-better-toml
-      redhat.java
- 
-      # functionality extensions
-      eamodio.gitlens
-      wix.vscode-import-cost
-      ms-vscode-remote.remote-ssh
-      ms-vscode-remote.remote-ssh-edit
-      vscodevim.vim
+    profiles.default = {
+      userSettings = {
+        "workbench.colorTheme" = "Gruvbox Dark Hard";
+      };
 
-      # appearance extensions
-      mechatroner.rainbow-csv
-      vscode-icons-team.vscode-icons
-    ];
+      extensions = with pkgs.vscode-extensions; [
+        # languages
+        jnoortheen.nix-ide
+        tomoki1207.pdf
+        redhat.vscode-yaml
+        tamasfe.even-better-toml
+        redhat.java
+        rust-lang.rust-analyzer
+        rebornix.ruby
+  
+        # functionality extensions
+        wix.vscode-import-cost
+        ms-vscode-remote.remote-ssh
+        ms-vscode-remote.remote-ssh-edit
+        vscodevim.vim
+        alefragnani.project-manager
+
+        # appearance extensions
+        mechatroner.rainbow-csv
+        vscode-icons-team.vscode-icons
+        jdinhlife.gruvbox
+        esbenp.prettier-vscode
+      ];
+    };
   };
 }
