@@ -18,7 +18,7 @@
         tamasfe.even-better-toml
         redhat.java
         rust-lang.rust-analyzer
-        rebornix.ruby
+        shopify.ruby-lsp
   
         # functionality extensions
         wix.vscode-import-cost
