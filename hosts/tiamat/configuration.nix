@@ -86,36 +86,8 @@
   services.thermald.enable = true;
 
   environment.systemPackages = [ pkgs.framework-tool ];
-
-  # security.pam.services.hyprlock.text = "
-  #     auth sufficient pam_fprintd.so
-  #     auth include system-login
-  # ";
   
   services.fwupd.enable = true;
-  # services.power-profiles-daemon.enable = true;
-
-  # services.logind = {
-  #   lidSwitch = "poweroff";
-  #   lidSwitchExternalPower = "lock";
-  #   lidSwitchDocked = "ignore";
-  # };
-
-  # services.auto-cpufreq = {
-  #   enable = true;
-  #   settings = {
-  #     battery = {
-  #       governor = "powersave";
-  #       energy_performance_preference = "power";
-  #       turbo = "never";
-  #     };
-  #     charger = {
-  #       governor = "performance";
-  #       energy_performance_preference = "performance";
-  #       turbo = "auto";
-  #     };
-  #   };
-  # };
 
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];

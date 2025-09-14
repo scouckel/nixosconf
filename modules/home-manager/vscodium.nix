@@ -8,6 +8,7 @@
     profiles.default = {
       userSettings = {
         "workbench.colorTheme" = "Gruvbox Dark Hard";
+        "vim.smartRelativeLine" = true;
       };
 
       extensions = with pkgs.vscode-extensions; [
@@ -26,12 +27,12 @@
         ms-vscode-remote.remote-ssh-edit
         vscodevim.vim
         alefragnani.project-manager
+        esbenp.prettier-vscode
 
         # appearance extensions
         mechatroner.rainbow-csv
         vscode-icons-team.vscode-icons
         jdinhlife.gruvbox
-        esbenp.prettier-vscode
       ];
     };
   };
