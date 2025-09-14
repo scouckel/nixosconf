@@ -10,9 +10,9 @@
           };
           accel_profile = "flat";
         };
-        gestures = {
-          workspace = true;
-        };
+        gesture = [
+          "3, horizontal, workspace,"
+        ];
 
         device = [
           { # xanathar touchpad

@@ -25,6 +25,7 @@
     unar
     unrar-wrapper
     brightnessctl
+    ntfs3g
   ];
 
   fonts.packages = with pkgs; [
