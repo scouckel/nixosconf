@@ -51,8 +51,8 @@
 
         "$mod, C, exec, rofi -show calc"
 
-        "$mod, PRINT, exec, hyprshot -m region -o ~/Documents/screenshots"
-        "$mod SHIFT, PRINT, exec, hyprshot -m region --clipboard-only"
+        ", PRINT, exec, hyprshot -m region -o ~/Documents/screenshots"
+        "SHIFT, PRINT, exec, hyprshot -m region --clipboard-only"
       ];
 
       bindm = [
