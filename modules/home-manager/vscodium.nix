@@ -9,6 +9,10 @@
       userSettings = {
         "workbench.colorTheme" = "Gruvbox Dark Hard";
         "vim.smartRelativeLine" = true;
+        "editor.lineNumbers" = "relative";
+        "editor.cursorSmoothCaretAnimation" = "on";
+        "editor.wordWrap" = "on";
+        "editor.bracketPairColorization.enabled" = true;
       };
 
       extensions = with pkgs.vscode-extensions; [
@@ -33,6 +37,7 @@
         mechatroner.rainbow-csv
         vscode-icons-team.vscode-icons
         jdinhlife.gruvbox
+        johnpapa.vscode-peacock
       ];
     };
   };
