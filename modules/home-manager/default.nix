@@ -37,6 +37,6 @@
     libreoffice
     gimp3
     vlc
-    chromium
+    ungoogled-chromium
   ];
 }
