@@ -98,6 +98,29 @@
 
   gaming.enable = true;
 
+  services.kanata = {
+    enable = true;
+    keyboards.tkb = {
+      devices = [
+        "dev/input/by-path/platform-i8042-serio-0-event-kbd"
+      ];
+      config = "
+        (defsrc h j k l caps)
+
+        (deflayer default _ _ _ _  @press)
+        (deflayer arrows left down up right @press)
+
+        (defalias press
+          (tap-hold-press 200 200 esc (layer-while-held arrows))
+        )
+      ";
+
+      extraDefCfg = "
+        process-unmapped-keys yes
+      ";
+    };
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
