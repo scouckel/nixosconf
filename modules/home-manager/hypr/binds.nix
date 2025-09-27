@@ -53,6 +53,8 @@
 
         ", PRINT, exec, hyprshot -m region -o ~/Documents/screenshots"
         "SHIFT, PRINT, exec, hyprshot -m region --clipboard-only"
+
+        "$mod SHIFT CTRL ALT, L, exec, xdg-open https://linkedin.com" # important bind
       ];
 
       bindm = [
