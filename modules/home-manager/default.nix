@@ -9,8 +9,8 @@
     ./zen-browser.nix
     ./obs.nix
     ./spicetify.nix
-    ./lf.nix
-    ./yazi.nix
+    # ./lf.nix
+    # ./yazi.nix
     ./fastfetch.nix
     ./gaming.nix
   ];
@@ -38,5 +38,6 @@
     gimp3
     vlc
     ungoogled-chromium
+    audacity
   ];
 }
