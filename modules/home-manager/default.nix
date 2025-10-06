@@ -13,6 +13,7 @@
     # ./yazi.nix
     ./fastfetch.nix
     ./gaming.nix
+    ./rbw.nix
   ];
 
   home.packages = with pkgs; [
