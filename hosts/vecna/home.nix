@@ -74,6 +74,10 @@
       "9,monitor:HDMI-A-1"
       "10,monitor:HDMI-A-1"
     ];
+
+    env = [
+      "AQ_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
+    ];
   };
 
   dconf.settings."org/gnome/desktop/interface" = {
