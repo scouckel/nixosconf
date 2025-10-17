@@ -8,6 +8,9 @@
     profiles.default = {
       userSettings = {
         "workbench.colorTheme" = "Gruvbox Dark Hard";
+        "editor.fontFamily" = "JetBrains Mono";
+        "editor.fontSize" = 12;
+        "editor.fontLigatures" = true;
         "vim.smartRelativeLine" = true;
         "editor.lineNumbers" = "relative";
         "editor.cursorSmoothCaretAnimation" = "on";

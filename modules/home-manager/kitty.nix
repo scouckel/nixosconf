@@ -10,8 +10,8 @@
 
     enableGitIntegration = true;
     font = {
-      package = pkgs.dm-mono;
-      name = "DM Mono";
+      package = pkgs.jetbrains-mono;
+      name = "Jetbrains Mono";
       size = 10;
     };
 

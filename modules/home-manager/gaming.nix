@@ -7,7 +7,7 @@
 
   config = lib.mkIf config.gaming.enable {
     home.packages = [
-      pkgs.prismlauncher-unwrapped
+      pkgs.prismlauncher
       pkgs.cemu
       pkgs.ryubing
     ];
