@@ -22,6 +22,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, nixos-hardware, ... }@inputs: {
@@ -40,6 +44,7 @@
               imports = [
                 ./hosts/vecna/home.nix
                 ./modules/home-manager
+                inputs.nvf.homeManagerModules.default
               ];
             };
             home-manager.extraSpecialArgs = {inherit inputs;};
@@ -61,6 +66,7 @@
               imports = [
                 ./hosts/xanathar/home.nix
                 ./modules/home-manager
+                inputs.nvf.homeManagerModules.default
               ];
             };
             home-manager.extraSpecialArgs = {inherit inputs;};
@@ -82,6 +88,7 @@
               imports = [
                 ./hosts/tiamat/home.nix
                 ./modules/home-manager
+                inputs.nvf.homeManagerModules.default
               ];
             };
             home-manager.extraSpecialArgs = {inherit inputs;};

@@ -14,6 +14,7 @@
     ./fastfetch.nix
     ./gaming.nix
     # ./rbw.nix
+    ./nvf.nix
   ];
 
   home.packages = with pkgs; [
