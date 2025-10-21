@@ -25,7 +25,7 @@
       languages = {
         enableTreesitter = true;
 
-        #nix.enable = true;
+        nix.enable = true;
         rust.enable = true;
         ruby.enable = true;
       };
