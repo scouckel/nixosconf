@@ -6,9 +6,33 @@
       viAlias = true;
       vimAlias = true;
 
+      theme = {
+        enable = true;
+        name = "gruvbox";
+        style = "light";
+      };
+
+      options = {
+        tabstop = 2;
+        shiftwidth = 0;
+      };
+
       lsp = {
         enable = true;
 
+      };
+
+      languages = {
+        enableTreesitter = true;
+
+        #nix.enable = true;
+        rust.enable = true;
+        ruby.enable = true;
+      };
+
+      treesitter = {
+        enable = true;
+        context.enable = true;
       };
 
       utility = {

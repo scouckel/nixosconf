@@ -15,6 +15,7 @@
     ./gaming.nix
     # ./rbw.nix
     ./nvf.nix
+    ./lazygit.nix
   ];
 
   home.packages = with pkgs; [
