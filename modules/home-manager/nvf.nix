@@ -8,8 +8,9 @@
 
       theme = {
         enable = true;
-        name = "gruvbox";
-        style = "light";
+        name = "oxocarbon";
+        style = "dark";
+        #transparent = true;
       };
 
       options = {
@@ -24,7 +25,19 @@
           silent = true;
           action = ":w<CR>";
         }
-      ];
+        {
+          key = "<leader>x";
+          mode = "n";
+          silent = true;
+          action = ":wq<CR>";
+        }
+        {
+          key = "<leader>ff";
+          mode = "n";
+          silent = true;
+          action = ":Telescope find_files<CR>";
+        }
+     ];
 
       lsp = {
         enable = true;
@@ -42,10 +55,12 @@
       treesitter = {
         enable = true;
         context.enable = true;
+        highlight.enable = true;
       };
 
-      utility = {
+      telescope.enable = true;
 
+      utility = {
 
         motion = {
           # hop.enable = true;
