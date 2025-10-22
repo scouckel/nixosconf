@@ -23,7 +23,7 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nvf = {
-      url = "github:NotAShelf/nvf/v0.8";
+      url = "github:NotAShelf/nvf/ea3ee477fa1814352b30d114f31bf4895eed053e";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
