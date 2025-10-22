@@ -17,6 +17,15 @@
         shiftwidth = 0;
       };
 
+      keymaps = [
+        {
+          key = "<leader>w";
+          mode = "n";
+          silent = true;
+          action = ":w<CR>";
+        }
+      ];
+
       lsp = {
         enable = true;
 
