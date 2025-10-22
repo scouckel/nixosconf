@@ -4,7 +4,7 @@
   imports = [
     ./hypr
     ./git.nix
-    ./vscodium.nix
+    #./vscodium.nix
     ./kitty.nix
     ./zen-browser.nix
     ./obs.nix

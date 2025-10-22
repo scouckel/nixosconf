@@ -46,6 +46,8 @@
   systemd.services.lactd.wantedBy = [ "multi-user.target" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
+  hardware.cpu.amd.updateMicrocode = true;
+
   # networking
   system.name = "vecna";
   networking.hostName = "vecna";
