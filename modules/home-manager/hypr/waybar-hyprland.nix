@@ -27,12 +27,15 @@
       }
 
       window#waybar {
-        background: #16191C;
-        color: #AAB2BF;
+        background: #141617;
+        color: #D4BE98;
       }
 
       label.module { 
         padding: 0 10px;
+      }
+      #workspaces button {
+        color: #D4BE98;
       }
     ";
   };
