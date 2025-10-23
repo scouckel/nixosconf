@@ -34,6 +34,7 @@
       label.module { 
         padding: 0 10px;
       }
+
       #workspaces button {
         color: #D4BE98;
       }
