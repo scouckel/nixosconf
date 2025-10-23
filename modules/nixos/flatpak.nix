@@ -5,7 +5,7 @@
     enable = true;
 
     packages = [
-      "org.kde.kwrite"
+      #"org.kde.kwrite"
     ];
 
     update.onActivation = true;

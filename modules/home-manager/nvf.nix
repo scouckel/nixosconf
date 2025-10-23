@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.nvf = {
     enable = true;
@@ -5,13 +7,6 @@
     settings.vim = {
       viAlias = true;
       vimAlias = true;
-
-      theme = {
-        enable = true;
-        name = "gruvbox";
-        style = "dark";
-        #transparent = true;
-      };
 
       options = {
         tabstop = 2;
@@ -50,6 +45,7 @@
         nix.enable = true;
         rust.enable = true;
         ruby.enable = true;
+        java.enable = true;
       };
 
       treesitter = {
@@ -66,6 +62,18 @@
           # hop.enable = true;
           # leap.enable = true;
           precognition.enable = true;
+        };
+      };
+
+      extraPlugins = {
+        gruvbox-material = {
+          package = pkgs.vimPlugins.gruvbox-material;
+          setup = ''
+            vim.o.termguicolors = true
+            vim.o.background = "dark"
+            vim.g.gruvbox_material_background = "hard"
+            vim.cmd("colorscheme gruvbox-material")
+          '';
         };
       };
     };
