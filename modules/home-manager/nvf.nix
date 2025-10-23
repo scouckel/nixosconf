@@ -11,6 +11,7 @@
       options = {
         tabstop = 2;
         shiftwidth = 0;
+        termguicolors = true;
       };
 
       keymaps = [
@@ -33,16 +34,16 @@
           action = ":Telescope find_files<CR>";
         }
         {
-          key = "<leader>j";
+          key = "<C-d>";
           mode = "n";
           silent = true;
-          action = "Lzz";
+          action = "<C-d>zz";
         }
         {
-          key = "<leader>k";
+          key = "<C-u>";
           mode = "n";
           silent = true;
-          action = "Hzz";
+          action = "<C-u>zz";
         }
      ];
 
@@ -81,7 +82,6 @@
         gruvbox-material = {
           package = pkgs.vimPlugins.gruvbox-material;
           setup = ''
-            vim.o.termguicolors = true
             vim.o.background = "dark"
             vim.g.gruvbox_material_background = "hard"
             vim.cmd("colorscheme gruvbox-material")
