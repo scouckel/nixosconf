@@ -32,6 +32,18 @@
           silent = true;
           action = ":Telescope find_files<CR>";
         }
+        {
+          key = "<leader>j";
+          mode = "n";
+          silent = true;
+          action = "Lzz";
+        }
+        {
+          key = "<leader>k";
+          mode = "n";
+          silent = true;
+          action = "Hzz";
+        }
      ];
 
       lsp = {
@@ -50,7 +62,7 @@
 
       treesitter = {
         enable = true;
-        context.enable = true;
+        #context.enable = true;
         highlight.enable = true;
       };
 
