@@ -20,10 +20,11 @@
       };
     };
 
-    style = "
+    style = ''
       *{
         border: none;
         border-radius: 0;
+        font-family: "JetBrains Mono"
       }
 
       window#waybar {
@@ -38,6 +39,6 @@
       #workspaces button {
         color: #D4BE98;
       }
-    ";
+    '';
   };
 }
