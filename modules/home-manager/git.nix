@@ -3,11 +3,14 @@
 {
   programs.git = {
     enable = true;
-    userName = "scouckel";
-    userEmail = "james.krinsky@gmail.com";
-    extraConfig = {
+    settings = {
       init.defaultBranch = "main";
       safe.directory = "/etc/nixos";
+      
+      user = {
+        name = "scouckel";
+        email = "james.krinsky@gmail.com";
+      };
     };
   };
 }
