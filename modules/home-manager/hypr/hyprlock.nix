@@ -26,9 +26,9 @@
             size = "200, 50";
             position = "0, 0";
             fade_on_empty = false;
-            font_color = "rgb(170, 178, 191)";
-            inner_color = "rgb(22, 25, 28)";
-            outer_color = "rgb(46,195,234)";
+            font_color = "rgb(212, 190, 152)";
+            inner_color = "rgb(29, 32, 33)";
+            outer_color = "rgb(125, 174, 163)";
             outline_thickness = 2;
             rounding = 0;
             placeholder_text = "🔒🔒🔒";

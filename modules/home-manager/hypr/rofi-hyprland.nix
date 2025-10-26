@@ -4,7 +4,8 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi;
-    theme = "android_notification";
+    theme = "gruvbox-dark-hard";
+    font = "JetBrains Mono 13";
 
     plugins = with pkgs; [
       rofi-calc
