@@ -1,29 +1,43 @@
 { pkgs, ... }:
 
 {
-  home.packages = [ pkgs.dragon-drop ];
-
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;
 
     plugins = {
+      bypass = pkgs.yaziPlugins.bypass;
       ouch = pkgs.yaziPlugins.ouch;
+      git = pkgs.yaziPlugins.git;
     };
 
-    keymap = {
-      input.prepend_keymap = [
-        { run = "close"; on = [ "<c-q>" ]; }
-        { run = "close --submit"; on = [ "<enter>" ]; }
-        { run = "escape"; on = [ "<esc>" ]; }
-        { run = "backspace"; on = [ "<backspace>" ]; }
-      ];
-      mgr.prepend_keymap = [
-        { run = "escape"; on = [ "<esc>" ]; }
-        { run = "quit"; on = [ "q" ]; }
-        { run = "close"; on = [ "<c-q>" ]; }
-        { run = "shell dragon-drop '$1'"; on = [ "<C-n>" ]; }
-      ];
+    initLua = ''
+      require("git"):setup()
+    '';
+
+    settings = {
+      yazi = {
+        plugin.prepend_fetchers = [
+          { 
+            id   = "git";
+            name = "*";
+            run  = "git";
+          }
+          {
+            id   = "git";
+            name = "*/";
+            run  = "git";
+          }
+        ];
+      };
+
+      keymap = {
+
+      };
+
+      mgr = {
+        show_hidden = true;
+      };
     };
   };
 }

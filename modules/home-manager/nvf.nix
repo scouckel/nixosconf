@@ -49,7 +49,7 @@
 
       lsp = {
         enable = true;
-
+        servers.nixd.settings.nil.nix.autoArchive = false;
       };
 
       languages = {

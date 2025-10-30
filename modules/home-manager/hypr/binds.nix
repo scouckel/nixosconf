@@ -5,7 +5,7 @@
     wayland.windowManager.hyprland.settings.binds = {
       "$mod" = "SUPER";
       "$term" = "kitty";
-      "$filem" = "thunar";
+      "$filem" = "kitty yazi";
 
       bind = [
         "$mod SHIFT, K, exec, hyprlock"

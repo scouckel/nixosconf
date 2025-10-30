@@ -16,7 +16,6 @@
 
     enabledExtensions = with spicepkgs.extensions; [
       shuffle
-      fullAlbumDate
     ];
     enabledCustomApps = with spicepkgs.apps; [
 

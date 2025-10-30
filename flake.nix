@@ -74,7 +74,8 @@
           nur.modules.nixos.default
           auto-cpufreq.nixosModules.default
         ];
-      };      
+      };
+      # new laptop
       tiamat = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
