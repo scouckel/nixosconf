@@ -45,6 +45,7 @@
 
   home.sessionVariables = {
     EDITOR = "vi";
+    VISUAL = "vi";
   };
 
   xdg.mimeApps = {
@@ -52,6 +53,7 @@
 
     defaultApplications = {
       "application/pdf" = "userapp-kitty vi-DARLE3.desktop";
+      "application/toml" = "userapp-kitty vi-DARLE3.desktop";
       "application/vnd.microsoft.portable-executable" = "wine-desktop";
       "inode/directory" = "userapp-kitty yazi-X3BEF3.desktop";
       "text/plain" = "userapp.kitty vi-DARLE3.desktop";

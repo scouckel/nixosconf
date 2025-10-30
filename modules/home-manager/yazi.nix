@@ -38,6 +38,15 @@
       mgr = {
         show_hidden = true;
       };
+
+      opener = {
+        edit = [
+          {
+            run = ''vi "$@"'';
+            block = true;
+          }
+        ];
+      };
     };
   };
 }
