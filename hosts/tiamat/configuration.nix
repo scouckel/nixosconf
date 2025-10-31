@@ -24,7 +24,8 @@
       }}/bsol";
     };
   };
-  
+ 
+  hardware.framework.enableKmod = false;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   hardware.firmware = with pkgs; [
     linux-firmware
