@@ -45,6 +45,12 @@
           silent = true;
           action = "<C-u>zz";
         }
+        {
+          key = "<leader>n";
+          mode = "n";
+          silent = true;
+          action = ":noh<CR>";
+        }
      ];
 
       lsp = {
