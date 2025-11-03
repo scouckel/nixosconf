@@ -37,6 +37,7 @@
     enable = true;
     clean.enable = true;
     clean.extraArgs = "--keep-since 3d --keep 3";
+    clean.dates = "daily";
     flake = "/home/jck/nixosconf/";
   };
 
