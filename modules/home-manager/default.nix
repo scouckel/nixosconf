@@ -57,9 +57,10 @@
       "application/pdf" = "userapp-kitty vi-DARLE3.desktop";
       "application/toml" = "userapp-kitty vi-DARLE3.desktop";
       "application/vnd.microsoft.portable-executable" = "wine-desktop";
+      "application/zip" = "lxqt-archiver.desktop";
       "inode/directory" = "userapp-kitty yazi-X3BEF3.desktop";
-      "test/html" = "zen-twilight.desktop";
-      "text/plain" = "userapp.kitty vi-DARLE3.desktop";
+      "text/html" = "zen-twilight.desktop";
+      "text/plain" = "userapp-kitty vi-DARLE3.desktop";
       "x-scheme-handler/about" = "zen-twilight.desktop";
       "x-scheme-handler/http" = "zen-twilight.desktop";
       "x-scheme-handler/https" = "zen-twilight.desktop";
