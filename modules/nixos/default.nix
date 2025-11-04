@@ -50,7 +50,7 @@
       gutenprint
       brgenml1lpr
       brgenml1cupswrapper
-      pkgs.cnijfilter2
+      cnijfilter2
     ];
   };
   
