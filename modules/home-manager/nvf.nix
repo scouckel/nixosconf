@@ -69,7 +69,7 @@
 
       treesitter = {
         enable = true;
-        #context.enable = true;
+        # context.enable = true;
         highlight.enable = true;
       };
 
@@ -82,6 +82,10 @@
           # leap.enable = true;
           precognition.enable = true;
         };
+      };
+
+      visuals = {
+        rainbow-delimiters.enable = true;
       };
 
       extraPlugins = {
