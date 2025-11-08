@@ -78,6 +78,7 @@
           }
           nur.modules.nixos.default
           auto-cpufreq.nixosModules.default
+          chaotic.nixosModules.default
         ];
       };
       # new laptop
@@ -102,6 +103,7 @@
           nur.modules.nixos.default
           auto-cpufreq.nixosModules.default
           nixos-hardware.nixosModules.framework-13-7040-amd
+          chaotic.nixosModules.default
         ];
       };
     };
