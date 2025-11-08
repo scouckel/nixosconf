@@ -10,6 +10,7 @@
     ./thunar.nix
     ./gaming.nix
     ./nix-ld.nix
+    ./nordvpn.nix
   ];
 
   users.users.jck.packages = with pkgs; [

@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [ # Include the results of the hardware scan.
@@ -23,8 +23,12 @@
       }}/bsol";
     };
   };
-  
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  chaotic.mesa-git = {
+    enable = true;
+    fallbackSpecialisation = true;
+  };
 
   # amd gpu config
   hardware.graphics = {
@@ -35,6 +39,7 @@
       libva
     ];
   };
+
   boot.initrd.availableKernelModules = [ "amdgpu" ];
   hardware.firmware = with pkgs; [
     linux-firmware
@@ -81,7 +86,7 @@
   users.users.jck = {
     isNormalUser = true;
     description = "jck";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "nordvpn" ];
   };
 
   nixpkgs.config.allowUnfree = true;
