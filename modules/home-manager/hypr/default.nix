@@ -84,8 +84,6 @@
       enable = true;
       xwayland.enable = true;
 
-      portalPackage = pkgs.xdg-desktop-portal-hyprland;
-
       settings = {
         exec-once = [
           "lxqt-policykit-agent"

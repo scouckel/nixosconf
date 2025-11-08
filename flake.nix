@@ -26,10 +26,7 @@
       url = "github:NotAShelf/nvf/v0.8";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    chaotic = {
-      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, nixos-hardware, chaotic, ... }@inputs: {
