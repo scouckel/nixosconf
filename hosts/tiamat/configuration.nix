@@ -79,7 +79,7 @@
   users.users.jck = {
     isNormalUser = true;
     description = "jck";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "nordvpn" ];
   };
 
   nixpkgs.config.allowUnfree = true;
