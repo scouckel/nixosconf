@@ -34,7 +34,7 @@
     qbittorrent
     zoom-us
     obsidian
-    cryptomator
+    # cryptomator
     networkmanagerapplet
     libreoffice
     gimp3
