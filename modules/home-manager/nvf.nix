@@ -51,7 +51,7 @@
           silent = true;
           action = ":noh<CR>";
         }
-     ];
+      ];
 
       lsp = {
         enable = true;
@@ -76,7 +76,6 @@
       telescope.enable = true;
 
       utility = {
-
         motion = {
           # hop.enable = true;
           # leap.enable = true;
