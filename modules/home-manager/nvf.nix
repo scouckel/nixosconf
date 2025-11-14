@@ -8,6 +8,8 @@
       viAlias = true;
       vimAlias = true;
 
+      lineNumberMode = "relNumber";
+
       options = {
         tabstop = 2;
         shiftwidth = 0;
@@ -97,6 +99,17 @@
           '';
         };
       };
+      
+      autocmds = [
+        {
+          event = [ "InsertEnter" ];
+          command = "set norelativenumber";
+        }
+        {
+          event = [ "InsertLeave" ];
+          command = "set relativenumber";
+        }
+      ];
     };
   };
 }
