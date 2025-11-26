@@ -103,6 +103,29 @@
           chaotic.nixosModules.default
         ];
       };
+      generic = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/generic/configuration.nix
+          /etc/nixos/hardware-configuration.nix
+          ./modules/nixos
+          nix-flatpak.nixosModules.nix-flatpak
+          home-manager.nixosModules.home-manager { 
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jck = {
+              imports = [
+                ./hosts/generic/home.nix
+                ./modules/home-manager
+                inputs.nvf.homeManagerModules.default
+              ];
+            };
+            home-manager.extraSpecialArgs = {inherit inputs;};
+          }
+          nur.modules.nixos.default
+          chaotic.nixosModules.default
+        ];
+      };
     };
   };
 }
