@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-  ];
-
   # Bootloader.
   boot.loader = {
     efi = {
@@ -30,16 +26,11 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    extraPackages =  with pkgs; [ 
-      rocmPackages.clr.icd
-      libva
-    ];
   };
 
   hardware.firmware = with pkgs; [
     linux-firmware
   ];
-  hardware.cpu.amd.updateMicrocode = true;
 
   # networking
   system.name = "system";
