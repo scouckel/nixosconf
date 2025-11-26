@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [ # Include the results of the hardware scan.
@@ -24,10 +24,12 @@
     };
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
-  chaotic.mesa-git = {
-    enable = true;
-    fallbackSpecialisation = true;
+  boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_cachyos;
+  chaotic.mesa-git.enable = lib.mkDefault true;
+
+  specialisation.stabler.configuration = {
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+    chaotic.mesa-git.enable = false;
   };
 
   # amd gpu config
