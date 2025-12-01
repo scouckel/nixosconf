@@ -26,8 +26,9 @@
 
   boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_cachyos;
   chaotic.mesa-git.enable = lib.mkDefault true;
+  chaotic.mesa-git.fallbackSpecialisation = false;
 
-  specialisation.stabler.configuration = {
+  specialisation.eye.configuration = {
     boot.kernelPackages = pkgs.linuxPackages_latest;
     chaotic.mesa-git.enable = false;
   };
