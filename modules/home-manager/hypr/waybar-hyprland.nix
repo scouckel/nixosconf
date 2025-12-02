@@ -14,8 +14,29 @@
         modules-center = [ "hyprland/window" ];
         modules-right = [ "pulseaudio" "battery" "clock" ];
 
+        "battery" =  {
+          "bat" = "BAT2";
+          "interval" = 60;
+          "states" = {
+            "warning" = 30;
+            "critical" = 15;
+          };
+          "format" = "{capacity}% {icon}";
+          "format-icons" = ["" "" "" "" ""];
+          "max-length" = 25;
+        };
+
         "hyprland/window" = {
           on-click = "rofi -show window";
+        };
+
+        "pulseaudio" = {
+          format = "{volume}% {icon}";
+          format-bluetooth = "{volume}% {icon}";
+          format-muted = "";
+          format-icons = {
+            default = ["" ""];
+          };
         };
       };
     };
