@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ ... }:
 
 {
   programs.waybar = {
@@ -54,7 +54,7 @@
       }
 
       label.module { 
-        padding: 0 10px;
+        padding: 0 20px;
       }
 
       #workspaces button {
