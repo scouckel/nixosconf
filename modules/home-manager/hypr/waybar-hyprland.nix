@@ -29,8 +29,9 @@
         };
 
         "hyprland/window" = {
+          format = "{initialClass}";
           on-click = "rofi -show window";
-          max-length = 64;
+          max-length = 25;
         };
         
         idle_inhibitor = {
