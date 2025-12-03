@@ -11,8 +11,8 @@
   in
   {
     enable = true;
-    theme = spicepkgs.themes.sleek;
-    colorScheme = "Deep";
+    # theme = spicepkgs.themes.sleek;
+    # colorScheme = "Deep";
 
     enabledExtensions = with spicepkgs.extensions; [
       shuffle
