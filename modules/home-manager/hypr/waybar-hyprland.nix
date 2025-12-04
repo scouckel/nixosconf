@@ -62,7 +62,7 @@
           on-click-middle = "playerctl --player=spotify_player,spotify shuffle toggle";
           on-scroll-up = "playerctl --player=spotify_player,spotify next";
           on-scroll-down = "playerctl --player=spotify_player,spotify previous";
-          exec = "${pkgs.writeShellScriptBin "spotifyplayer" ''
+          exec = "${pkgs.writeShellScriptBin "spotify-module-script" ''
             shorten() {
               if [ ''${#1} -le 16 ]; then
                 printf "%s" "$1"
@@ -93,7 +93,7 @@
             fi
 
             echo "$info  "
-          ''}/bin/spotifyplayer";
+          ''}/bin/spotify-module-script";
         };
       };
     };
@@ -111,7 +111,7 @@
       }
 
       label.module { 
-        padding: 0 20px;
+        padding: 0 15px;
       }
 
       #workspaces button {
