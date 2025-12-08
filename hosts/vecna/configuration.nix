@@ -16,11 +16,12 @@
       device = "nodev";
       useOSProber = true;
       theme = "${pkgs.fetchFromGitHub { # blue screen of life grub theme
-        owner = "harishnkr";
+        owner = "scouckel";
         repo = "bsol";
-        rev = "8f39f66967e2391b11ee554578f0b821070ec72a";
-        sha256 = "sha256-UD5crwJdqnKVnxTN2vHIukJnQuzxmkko3E5wb8Xg6gs";
+        rev = "a8eedad9e7163dce230ca7886be8e1b4ef81da99";
+        sha256 = "sha256-P2q73uM1Ysn1a+0mOGOvee/Q1WAYRGQvfanrasx/8r8";
       }}/bsol";
+      entryOptions = "--class nixos";
     };
   };
 
