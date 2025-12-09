@@ -25,15 +25,7 @@
     };
   };
 
-  boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_cachyos;
-  chaotic.mesa-git.enable = lib.mkDefault true;
-  chaotic.mesa-git.fallbackSpecialisation = false;
-
-  specialisation.eye.configuration = {
-    boot.kernelPackages = pkgs.linuxPackages_latest;
-    chaotic.mesa-git.enable = false;
-  };
-
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   # amd gpu config
   hardware.graphics = {
     enable = true;
@@ -131,6 +123,9 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+  networking.firewall.checkReversePath = false;
+  networking.firewall.allowedTCPPorts = [ 443 ];
+  networking.firewall.allowedUDPPorts = [ 1194 ];
 
   system.stateVersion = "25.05";
 }

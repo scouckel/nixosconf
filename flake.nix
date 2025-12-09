@@ -26,10 +26,10 @@
       url = "github:NotAShelf/nvf/v0.8";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    nordvpn-flake.url = "github:scouckel/nordvpn-flake";
   };
 
-  outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, nixos-hardware, chaotic, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, nixos-hardware, nordvpn-flake, ... }@inputs: {
     nixosConfigurations = {
     # desktop
       vecna = nixpkgs.lib.nixosSystem {
@@ -51,7 +51,6 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
           nur.modules.nixos.default
-          chaotic.nixosModules.default
         ];
       };
       # laptop
@@ -75,7 +74,6 @@
           }
           nur.modules.nixos.default
           auto-cpufreq.nixosModules.default
-          chaotic.nixosModules.default
         ];
       };
       # new laptop
@@ -100,7 +98,6 @@
           nur.modules.nixos.default
           auto-cpufreq.nixosModules.default
           nixos-hardware.nixosModules.framework-13-7040-amd
-          chaotic.nixosModules.default
         ];
       };
       generic = nixpkgs.lib.nixosSystem {
@@ -123,7 +120,6 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
           nur.modules.nixos.default
-          chaotic.nixosModules.default
         ];
       };
     };
