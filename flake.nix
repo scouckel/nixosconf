@@ -26,9 +26,10 @@
       url = "github:NotAShelf/nvf/v0.8";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nordvpn-flake.url = "github:scouckel/nordvpn-flake";
   };
 
-  outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, nixos-hardware, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nix-flatpak, nur, auto-cpufreq, nixos-hardware, nordvpn-flake, ... }@inputs: {
     nixosConfigurations = {
     # desktop
       vecna = nixpkgs.lib.nixosSystem {
@@ -50,6 +51,7 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
           nur.modules.nixos.default
+          nordvpn-flake.nixosModules.nordvpn-flake
         ];
       };
       # laptop

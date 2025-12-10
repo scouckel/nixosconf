@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -30,6 +30,8 @@
   ];
 
   programs.localsend.enable = true;
+
+  services.nordvpn.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
