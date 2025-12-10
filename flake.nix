@@ -75,6 +75,7 @@
           }
           nur.modules.nixos.default
           auto-cpufreq.nixosModules.default
+          nordvpn-flake.nixosModules.nordvpn-flake
         ];
       };
       # new laptop
@@ -99,6 +100,7 @@
           nur.modules.nixos.default
           auto-cpufreq.nixosModules.default
           nixos-hardware.nixosModules.framework-13-7040-amd
+          nordvpn-flake.nixosModules.nordvpn-flake
         ];
       };
       generic = nixpkgs.lib.nixosSystem {
@@ -121,6 +123,7 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
           nur.modules.nixos.default
+          nordvpn-flake.nixosModules.nordvpn-flake
         ];
       };
     };
