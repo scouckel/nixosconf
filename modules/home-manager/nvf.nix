@@ -64,6 +64,7 @@
         enableTreesitter = true;
 
         nix.enable = true;
+        clang.enable = true;
         rust.enable = true;
         ruby.enable = true;
         java.enable = true;
