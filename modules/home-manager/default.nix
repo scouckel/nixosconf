@@ -42,6 +42,7 @@
     vlc
     ungoogled-chromium
     audacity
+    speedtest-cli
   ];
 
   home.sessionVariables = {
@@ -56,6 +57,7 @@
 
     defaultApplications = {
       "application/pdf" = "userapp-kitty vi-DARLE3.desktop";
+      "application/javascript" = "userapp-kitty vi-DARLE3.desktop";
       "application/toml" = "userapp-kitty vi-DARLE3.desktop";
       "application/vnd.microsoft.portable-executable" = "wine-desktop";
       "application/zip" = "lxqt-archiver.desktop";

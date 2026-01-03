@@ -11,6 +11,7 @@
     ./gaming.nix
     ./nix-ld.nix
     # ./nordvpn.nix
+    # ./ly.nix
   ];
 
   users.users.jck.packages = with pkgs; [
@@ -53,7 +54,7 @@
       gutenprint
       brgenml1lpr
       brgenml1cupswrapper
-      cnijfilter2
+      # cnijfilter2
     ];
   };
   

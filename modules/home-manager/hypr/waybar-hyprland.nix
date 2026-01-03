@@ -8,7 +8,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 15;
+        height = 30;
         
         modules-left = [ "hyprland/workspaces" "idle_inhibitor" ];
         modules-center = [ "hyprland/window" ];
@@ -64,12 +64,12 @@
           on-scroll-down = "playerctl --player=spotify_player,spotify previous";
           exec = "${pkgs.writeShellScriptBin "spotify-module-script" ''
             shorten() {
-              if [ ''${#1} -le 16 ]; then
+              if [ ''${#1} -le 12 ]; then
                 printf "%s" "$1"
               else
-                local truncated="''${1:0:13}"
+                local truncated="''${1:0:9}"
                 if [ "''${truncated: -1}" = " " ]; then
-                  truncated="''${truncated:0:12}"
+                  truncated="''${truncated:0:8}"
                 fi
                 printf "%s…" "$truncated"
               fi

@@ -16,6 +16,7 @@
         "$mod, F2, exec, $term"
         "$mod, F3, exec, $filem"
         "$mod, F4, killactive,"
+        "$mod SHIFT, F4, exec, hyprctl kill"
 
         "$mod, F, fullscreen"
         "$mod, T, togglefloating"
