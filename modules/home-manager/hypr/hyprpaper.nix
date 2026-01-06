@@ -14,8 +14,12 @@
         ipc = "on";
         splash = false;
 
-        preload = [ "~/nixosconf/modules/home-manager/hypr/camdenyards.jpg" ];
-        wallpaper = [ ", ~/nixosconf/modules/home-manager/hypr/camdenyards.jpg" ];
+        wallpaper = [
+          {
+            monitor = "";
+            path = "~/nixosconf/modules/home-manager/hypr/camdenyards.jpg";
+          }
+        ];
       };
     };
   };
