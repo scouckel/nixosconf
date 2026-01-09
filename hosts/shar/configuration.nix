@@ -48,6 +48,7 @@
     prefixLength = 24;
   }];
   networking.interfaces.eno1.mtu = 1400;
+  networking.interfaces.eno1.wakeOnLan.enable = true;
   networking.defaultGateway = {
     address = "173.66.162.1";
     interface = "eno1";
@@ -101,6 +102,8 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBgQS9Y3yqztLL0Ss0JUCN04B6zgLXIETgY0jyvT6I98 jck@tiamat"
     ];
   };
+
+  security.sudo.wheelNeedsPassword = false;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
