@@ -126,6 +126,13 @@
           nordvpn-flake.nixosModules.nordvpn-flake
         ];
       };
+      shar = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/shar/configuration.nix
+          ./hosts/shar/hardware-configuration.nix
+        ];
+      };
     };
   };
 }
