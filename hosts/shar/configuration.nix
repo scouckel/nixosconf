@@ -57,6 +57,13 @@
     "9.9.9.9"
   ];
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  services.xserver.enable = true;
+
   # Set your time zone.
   time.timeZone = "America/New_York";
 
@@ -88,6 +95,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       vim
+      git
     ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBgQS9Y3yqztLL0Ss0JUCN04B6zgLXIETgY0jyvT6I98 jck@tiamat"
