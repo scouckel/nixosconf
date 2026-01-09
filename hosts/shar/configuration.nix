@@ -45,7 +45,7 @@
   networking.networkmanager.enable = false;
   networking.interfaces.eno1.ipv4.addresses = [{
     address = "173.66.162.54";
-    prefixLength = 24;
+    prefixLength = 28;
   }];
   networking.interfaces.eno1.mtu = 1400;
   networking.interfaces.eno1.wakeOnLan.enable = true;
@@ -129,6 +129,7 @@
   services.openssh = {
     enable = true;
     settings.PasswordAuthentication = false;
+    openFirewall = true;
   };
 
   # Open ports in the firewall.
