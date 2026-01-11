@@ -51,7 +51,7 @@
   }];
   networking.interfaces.eno1.mtu = 1400;
   networking.interfaces.eno1.wakeOnLan.enable = true;
-  networking.hostID = "958b5d5d";
+  networking.hostId = "958b5d5d";
   networking.useDHCP = false;
   networking.defaultGateway = {
     address = "173.66.162.1";
