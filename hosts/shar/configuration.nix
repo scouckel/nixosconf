@@ -140,7 +140,7 @@
     enable = true;
 
     exports = ''
-      /tank/media   100.64.0.0/10(ro,async,no_subtree_check)
+      /tank/media   100.64.0.0/10(rw,async,no_subtree_check)
       /tank/data    100.64.0.0/10(rw,async,no_subtree_check)
       /tank/backups 100.64.0.0/10(rw,async,no_subtree_check)
     '';
