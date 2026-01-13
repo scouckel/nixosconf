@@ -148,6 +148,28 @@
     '';
   };
 
+  services.caddy = {
+    enable = true;
+
+    virtualHosts = {
+      "music.jckrinsky.net" = {
+        extraConfig = ''
+          reverse_proxy localhost:4533
+        '';
+      };
+    };
+
+    services.navidrome = {
+      enable = true;
+      settings = {
+        MusicFolder = "/tank/media/audio";
+        DataFolder = "/data/tank/navidrome";
+        Address = "127.0.0.1";
+        Port = 4533;
+        EnableTranscoding = true;
+      };
+    };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
