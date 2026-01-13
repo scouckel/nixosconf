@@ -94,6 +94,8 @@
     packages = with pkgs; [
       vim
       git
+      lazygit
+      yazi
     ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBgQS9Y3yqztLL0Ss0JUCN04B6zgLXIETgY0jyvT6I98 jck@tiamat"
