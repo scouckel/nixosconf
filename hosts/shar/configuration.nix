@@ -164,7 +164,7 @@
     enable = true;
     settings = {
       MusicFolder = "/tank/media/audio";
-      DataFolder = "/data/tank/navidrome";
+      DataFolder = "/tank/data/navidrome";
       Address = "127.0.0.1";
       Port = 4533;
       EnableTranscoding = true;
