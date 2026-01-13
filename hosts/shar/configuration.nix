@@ -158,17 +158,18 @@
         '';
       };
     };
+  };
 
-    services.navidrome = {
-      enable = true;
-      settings = {
-        MusicFolder = "/tank/media/audio";
-        DataFolder = "/data/tank/navidrome";
-        Address = "127.0.0.1";
-        Port = 4533;
-        EnableTranscoding = true;
-      };
+  services.navidrome = {
+    enable = true;
+    settings = {
+      MusicFolder = "/tank/media/audio";
+      DataFolder = "/data/tank/navidrome";
+      Address = "127.0.0.1";
+      Port = 4533;
+      EnableTranscoding = true;
     };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
