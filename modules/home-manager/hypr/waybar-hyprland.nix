@@ -12,7 +12,7 @@
         
         modules-left = [ "hyprland/workspaces" "idle_inhibitor" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "custom/spotify" "pulseaudio" "battery" "clock" ];
+        modules-right = [ "custom/feishin" "pulseaudio" "battery" "clock" ];
 
         battery =  {
           interval = 60;
@@ -51,18 +51,18 @@
           };
         };
 
-        "custom/spotify" = {
+        "custom/feishin" = {
           format = "{}";
           escape = true;
-          exec-if = "pgrep spotify";
+          exec-if = "pgrep -f 'feishin'";
           interval = 1;
-          on-click = "playerctl --player=spotify_player,spotify play-pause";
-          on-click-right = "playerctl --player=spotify_player,spotify loop track";
-          on-double-click-right = "playerctl --player=spotify_player,spotify loop playlist";
-          on-click-middle = "playerctl --player=spotify_player,spotify shuffle toggle";
-          on-scroll-up = "playerctl --player=spotify_player,spotify next";
-          on-scroll-down = "playerctl --player=spotify_player,spotify previous";
-          exec = "${pkgs.writeShellScriptBin "spotify-module-script" ''
+          on-click = "playerctl --player=,Feishin play-pause";
+          on-click-right = "playerctl --player=,Feishin loop track";
+          on-double-click-right = "playerctl --player=,Feishin loop playlist";
+          on-click-middle = "playerctl --player=,Feishin shuffle toggle";
+          on-scroll-up = "playerctl --player=,Feishin next";
+          on-scroll-down = "playerctl --player=,Feishin previous";
+          exec = "${pkgs.writeShellScriptBin "feishin-module-script" ''
             shorten() {
               if [ ''${#1} -le 12 ]; then
                 printf "%s" "$1"
@@ -75,12 +75,12 @@
               fi
             }
 
-            player_status=$(playerctl --player=spotify_player,spotify status 2> /dev/null)
-            artist="$(shorten "$(playerctl --player=spotify_player,spotify metadata artist)")"
-            title="$(shorten "$(playerctl --player=spotify_player,spotify metadata title)")"
+            player_status=$(playerctl --player=,Feishin status 2> /dev/null)
+            artist="$(shorten "$(playerctl --player=,Feishin metadata artist)")"
+            title="$(shorten "$(playerctl --player=,Feishin metadata title)")"
             info="$artist - $title"
 
-            if [ "$(playerctl --player=spotify_player,spotify shuffle)" = "On" ]; then
+            if [ "$(playerctl --player=,Feishin shuffle)" = "On" ]; then
               info="$info  "
             fi
 
@@ -88,12 +88,12 @@
               info="$info  "
             fi
 
-            if [ "$(playerctl --player=spotify_player,spotify loop)" = "Track" ]; then
+            if [ "$(playerctl --player=,Feishin loop)" = "Track" ]; then
               info="$info 󱍸 "
             fi
 
-            echo "$info  "
-          ''}/bin/spotify-module-script";
+            echo "$info  "
+          ''}/bin/feishin-module-script";
         };
       };
     };
@@ -115,7 +115,13 @@
       }
 
       #workspaces button {
+        background: #141617;
         color: #D4BE98;
+      }
+
+      #workspaces button active {
+        background: #D4BE98;
+        color: #141617;
       }
     '';
   };

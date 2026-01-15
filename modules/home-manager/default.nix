@@ -43,6 +43,8 @@
     ungoogled-chromium
     audacity
     speedtest-cli
+    kid3
+    feishin
   ];
 
   home.sessionVariables = {

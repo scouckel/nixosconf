@@ -65,15 +65,15 @@
       ];
 
       bindl = [
-        ", XF86AudioPrev, exec, playerctl --player=spotify_player,spotify previous"
-        ", XF86AudioNext, exec, playerctl --player=spotify_player,spotify next"
-        ", XF86AudioPause, exec, playerctl --player=spotify_player,spotify play-pause"
-        ", XF86AudioPlay, exec, playerctl --player=spotify_player,spotify play-pause"
-        "$mod, XF86AudioPrev, exec, playerctl --player=spotify_player,spotify loop none"
-        "$mod, XF86AudioPause, exec, playerctl --player=spotify_player,spotify loop playlist"
-        "$mod, XF86AudioPlay, exec, playerctl --player=spotify_player,spotify loop playlist"
-        "$mod, XF86AudioNext, exec, playerctl --player=spotify_player,spotify loop track"
-        "$mod, XF86AudioStop, exec, playerctl --player=spotify_player,spotify shuffle toggle"
+        ", XF86AudioPrev, exec, playerctl --player=Feishin previous"
+        ", XF86AudioNext, exec, playerctl --player=Feishin next"
+        ", XF86AudioPause, exec, playerctl --player=Feishin play-pause"
+        ", XF86AudioPlay, exec, playerctl --player=Feishin play-pause"
+        "$mod, XF86AudioPrev, exec, playerctl --player=Feishin loop none"
+        "$mod, XF86AudioPause, exec, playerctl --player=Feishin loop playlist"
+        "$mod, XF86AudioPlay, exec, playerctl --player=Feishin loop playlist"
+        "$mod, XF86AudioNext, exec, playerctl --player=Feishin loop track"
+        "$mod, XF86AudioStop, exec, playerctl --player=Feishin shuffle toggle"
         ", XF86AudioStop, exec, playerctl -a stop"
 
         "$mod SHIFT, L, exec, hyprctl dispatch dpms toggle"
