@@ -45,6 +45,7 @@
     speedtest-cli
     kid3
     feishin
+    bluetui
   ];
 
   home.sessionVariables = {

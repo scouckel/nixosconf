@@ -98,6 +98,8 @@
 
   gaming.enable = true;
 
+  client.nas.enable = true;
+
   hardware.wooting.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are

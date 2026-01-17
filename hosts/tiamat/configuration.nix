@@ -55,6 +55,12 @@
   # Set your time zone.
   # time.timeZone = "US/Central";
   services.automatic-timezoned.enable = true;
+  services.geoclue2 = {
+    enable = true;
+    geoProviderUrl = "https://api.beacondb.net/v1/geolocate";
+    submitData = false;
+    enableWifi = true;
+  };
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -101,6 +107,8 @@
 
   gaming.enable = true;
 
+  client.nas.enable = true;
+
   services.kanata = {
     enable = true;
     keyboards.tkb = {
@@ -123,6 +131,17 @@
       ";
     };
   };
+
+
+#  services.udev.extraRules = ''
+#    SUBSYSTEM=="power_supply", ATTR{type}=="Mains", ACTION=="change", RUN+="${pkgs.writeShellScriptBin "refresh-rate-script" "
+#      if grep -q 1 /sys/class/power_supply/ACAD/online; then
+#        hyprctl keyword monitor 'eDP-1,2256x1504@60, 0x0, 1.5666667'
+#      else
+#        hyprctl keyword monitor 'eDP-1,2256x1504@30, 0x0, 1.5666667'
+#      fi"}/bin/refresh-rate-script"
+#  '';
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
