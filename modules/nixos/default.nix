@@ -12,6 +12,7 @@
     ./nix-ld.nix
     # ./nordvpn.nix
     # ./ly.nix
+    ./nas.nix
   ];
 
   users.users.jck.packages = with pkgs; [
