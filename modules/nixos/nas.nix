@@ -7,11 +7,28 @@
 
   config = lib.mkIf config.client.nas.enable {
     services.tailscale.enable = true;
+    services.tailscale.useRoutingFeatures = "client";
+    services.tailscale.openFirewall = true;
+    services.tailscale.extraUpFlags = [ "--accept-dns=false" ];
     networking.nftables.enable = true;
     networking.firewall = {
       enable = true;
       trustedInterfaces = [ "tailscale0" ];
       allowedUDPPorts = [ config.services.tailscale.port ];
+    };
+
+    networking.nftables = {
+      tables = {
+        mullvad_tailscale = {
+          content = ''
+            chain output {
+              type route hook output priority 0; policy accept;
+              ip daddr 100.64.0.0/10 ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+            }
+          '';
+          family = "inet";
+        };
+      };
     };
 
     systemd.services.tailscaled.serviceConfig.Environment = [ 

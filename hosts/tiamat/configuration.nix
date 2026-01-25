@@ -38,7 +38,7 @@
 
   system.name = "tiamat";
   networking.hostName = "tiamat";
-  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+  networking.nameservers = [ "100.100.100.100" "1.1.1.1" "9.9.9.9" ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -87,7 +87,7 @@
   users.users.jck = {
     isNormalUser = true;
     description = "jck";
-    extraGroups = [ "networkmanager" "wheel" "nordvpn" ];
+    extraGroups = [ "networkmanager" "wheel" ];
   };
 
   nixpkgs.config.allowUnfree = true;

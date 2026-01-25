@@ -33,12 +33,16 @@
 
   programs.localsend.enable = true;
 
-  services.nordvpn.enable = true;
-
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     jetbrains-mono
   ];
+
+  fonts.fontconfig.defaultFonts = {
+    monospace = [
+      "JetBrainsMono Nerd Font"
+    ];
+  };
 
   programs.nh = {
     enable = true;
@@ -67,4 +71,8 @@
 
   programs.partition-manager.enable = true;
   services.udisks2.enable = true;
+
+  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
+  services.mullvad-vpn.enableExcludeWrapper = true;
 }

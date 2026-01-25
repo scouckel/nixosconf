@@ -57,9 +57,10 @@
     plugins = with pkgs; [
       networkmanager-openvpn
     ];
+    dns = "none";
   };
 
-  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+  networking.nameservers = [ "100.100.100.100" "1.1.1.1" "9.9.9.9" ];
   
   # localization
   time.timeZone = "US/Central";
@@ -84,7 +85,7 @@
   users.users.jck = {
     isNormalUser = true;
     description = "jck";
-    extraGroups = [ "networkmanager" "wheel" "nordvpn" ];
+    extraGroups = [ "networkmanager" "wheel" ];
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -125,9 +126,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-  networking.firewall.checkReversePath = false;
-  networking.firewall.allowedTCPPorts = [ 443 ];
-  networking.firewall.allowedUDPPorts = [ 1194 ];
 
   system.stateVersion = "25.05";
 }
