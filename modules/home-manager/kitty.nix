@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./fish.nix
-  ];
-
   programs.kitty = {
     enable = true;
 

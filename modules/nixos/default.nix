@@ -13,6 +13,7 @@
     # ./nordvpn.nix
     # ./ly.nix
     ./nas.nix
+    ./fish.nix
   ];
 
   users.users.jck.packages = with pkgs; [
@@ -75,4 +76,6 @@
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
   services.mullvad-vpn.enableExcludeWrapper = true;
+
+  programs.fish.enable = true;
 }

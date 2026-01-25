@@ -88,6 +88,7 @@
     isNormalUser = true;
     description = "jck";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
   };
 
   nixpkgs.config.allowUnfree = true;
