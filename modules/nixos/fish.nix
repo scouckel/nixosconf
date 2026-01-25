@@ -9,10 +9,5 @@
         fastfetch
       end
     '';
-
-    plugins = [
-      { name = "grc"; src = pkgs.fishPlugins.grc; }
-      { name = "bang-bang"; src = pkgs.fishPlugins.bang-bang; }
-    ];
   };
 }
